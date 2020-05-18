@@ -1,0 +1,12 @@
+     {{/* Arrangement */}}
+
+     {{ $date := . }}
+     {{ if not (or (reflect.IsSlice $date) (reflect.IsMap $date))  }}
+      {{  $date }}
+     {{ else  if (reflect.IsMap $date) }}
+      {{  index $date "#text" }}
+     {{ else  if (reflect.IsSlice $date) }}
+      {{ range $date }}
+        {{ index . "#text" }}
+      {{ end }}
+     {{ end }}

@@ -1,0 +1,35 @@
+{{ partial "headerguides.html" . }}
+
+<body lang="{{ .Site.LanguageCode }}" class="body-dsc">
+{{ partial "pagebannerguides.html" . }}
+<div class="wrapper">
+ 
+  {{ partial "containerlist.html" . }}
+  <main id="content">
+ 
+    {{ partial "menu-toggle-button.html" . }}
+    
+    {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
+    {{ if (reflect.IsSlice ($archdesc )) }}
+        {{ $archdesc = index $archdesc 0 }}
+    {{ end }}
+    {{ $dsc := index $archdesc "dsc" }}
+          
+    {{- if $dsc -}}
+      <h1 class="page-title">{{  partial "unittitle.html" .  }}</h1>  
+      <h2>Contents</h2>
+      {{/* Loop over the structure */}}
+       {{ $components := index $dsc 0 "c" }}
+{{/*        
+
+      {{/* This is an array of one */}}
+      <div class="digger">
+      {{- range  $components }}
+        {{ partial "diggerfish.html" (dict "current" . "recursions" 1 ) }}
+      {{ end }}
+      </div>
+    {{ end }}
+  </main>
+</div>
+
+  {{- partial "footer.html" . -}}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/akkasah/turkish/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/archives/mc_100/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/archives/rg_9_8/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_421/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_460/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/aia_080/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/oh_014/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/oh_033/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/tam_132/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/tam_439/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/</loc>
+  </url>
+  
+</urlset>

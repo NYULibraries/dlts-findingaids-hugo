@@ -1,0 +1,42 @@
+baseURL = "http://localhost/findingaids/"
+languageCode = "en-us"
+title = "Finding Aids Work in Progress"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+ 
+[params]
+  
+
+  
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["overview", "contents" ]
+
+[outputFormats]
+  [outputFormats.overview]
+    name = "Overview"
+    baseName = "index"
+    isPlainText = false
+    isHTML = true
+    mediaType = "text/html"
+    notAlternative = true
+    permalinkable = true
+  [outputFormats.contents]
+    name = "Contents"
+    baseName = "contents"
+    isPlainText = false
+    isHTML = true
+    mediaType = "text/html"
+    notAlternative = false
+    permalinkable = true
+  [outputFormats.alldata]
+    name = "Alldata"
+    baseName = "alldata"
+    isPlainText = false
+    isHTML = true
+    mediaType = "text/html"
+    notAlternative = false
+    permalinkable = true
+  
+
+

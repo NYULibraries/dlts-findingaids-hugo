@@ -1,0 +1,22 @@
+{{/* physdesc */}}
+{{ if (reflect.IsSlice . ) }}
+    <h4>Extent</h4>
+      {{ range . }}
+        {{ range .extent }}
+          {{  $thismap :=  .  }}
+          {{  if (reflect.IsMap $thismap) }}
+            {{  index $thismap "#text" }}
+          {{ end }}
+        {{ end }}  <br>
+      {{ end }}
+  
+{{ else  if (reflect.IsMap .) }}
+<h4>Extent</h4>
+{{ range .extent }}
+          {{  $thismap :=  .  }}
+          {{  if (reflect.IsMap $thismap) }}
+            {{  index $thismap "#text" }}
+          {{ end }}
+        {{ end }} 
+
+{{ end }}

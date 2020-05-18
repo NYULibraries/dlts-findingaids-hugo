@@ -1,0 +1,18 @@
+{{/* Formatted Note - general purpose */}}
+
+{{ $current := .current }}
+{{ $classname := .classname }}
+{{ $h := add .recursions 1 }}
+
+<div class="formattednote {{ $classname }}" id ="{{ .current.id }}">
+  <h{{- $h  }} class="formattednote-header">{{range .current.head }}{{ . }}{{ end }}</h{{- $h  }}>
+  <div>
+    {{ if not (or (reflect.IsSlice .current.p) (reflect.IsMap .current.p))  }}
+      {{ .current.p }}  
+    {{ else  if (reflect.IsSlice .current.p) }}
+      {{ range .current.p }}<p> {{ htmlUnescape . | safeHTML }} </p>{{ end }}
+    {{ else  if (reflect.IsMap .current.p) }}
+      {{ .current.p.value }}  
+    {{ end }}
+  </div>
+</div>

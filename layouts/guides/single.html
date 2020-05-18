@@ -1,0 +1,114 @@
+{{ partial "headerguides.html" . }}
+
+<body lang="{{ .Site.LanguageCode }}" class="body-dsc">
+{{ partial "pagebannerguides.html" . }}
+<div class="wrapper">
+ 
+  {{ partial "containerlist.html" . }}
+  <main id="content" class="">
+  {{ partial "menu-toggle-button.html" . }}
+  
+  {{ $data := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" 0 }}
+  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" }}
+  
+  {{- if $data }}
+  
+  {{- $did := index $data "did" }}
+  {{ if (reflect.IsSlice ($did )) }}
+  {{ $did = index $did 0 }}
+  {{ end }}
+
+  {{- $unittitle := index $did "unittitle" 0}}
+  {{- if (reflect.IsMap ($unittitle)) }}
+      {{- $unittitle = $unittitle.value }}
+  {{- end }}
+
+  <h2 class="page-title">{{ $unittitle | safeHTML }}</h2>
+
+  <div class="publisher">
+  
+    <h3>Publisher</h3>
+    {{- $publisher :=  $eadheader.filedesc.publicationstmt.publisher -}}
+    {{ if (reflect.IsMap $publisher) }}
+    {{ $publisher = $publisher.value }}
+    {{ end }}
+    <div>{{ $publisher }}</div>
+  </div>
+  
+  {{ range $data.acqinfo }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
+  {{- end -}}
+  
+  {{ range $data.bioghist }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
+  {{- end -}}
+
+  {{ range $data.scopecontent }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.accessrestrict }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.userestrict }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "userestrict" "recursions" 2) -}}
+  {{- end -}}
+
+  {{ range $data.prefercite }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "prefercite" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.processinfo }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "processinfo" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.arrangement }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.custodhist }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "custodhist" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.phystech }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.appraisal }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "appraisal" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.separatedmaterial }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "separatedmaterial" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.relatedmaterial }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.accruals }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "accruals" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.altformatavailable }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.odd }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ range $data.bibliography }}
+    {{- partial "formattednote.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
+  {{- end -}}
+  
+  {{ else }}
+    
+    <p>No data found at node "archdesc"</p>
+    
+    {{ end }}
+
+  </main></div>
+
+  {{- partial "footer.html" . -}}

@@ -1,0 +1,22 @@
+{{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
+
+{{ if (reflect.IsSlice ($archdesc )) }}
+{{ $archdesc = index $archdesc 0 }}
+{{ end }}
+
+{{- $did := index $archdesc "did" }}
+{{ if (reflect.IsSlice ($did )) }}
+{{ $did = index $did 0 }}
+{{ end }}
+
+{{- $unittitle := index $did "unittitle"}}
+
+{{- if (reflect.IsSlice ($unittitle)) }}
+  {{- $unittitle = index $unittitle 0 }}
+{{ end }}
+
+{{- if (reflect.IsMap ($unittitle)) }}
+  {{- $unittitle = $unittitle.value }}
+{{ end }}
+{{ $unittitle = $unittitle | safeHTML }}
+{{ return $unittitle }}

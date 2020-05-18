@@ -1,0 +1,113 @@
+{{/* Diggerfish */}}
+
+{{ $arguments := .current }}
+{{ $recursions := .recursions }}
+
+
+
+{{ if not (or (reflect.IsSlice $arguments) (reflect.IsMap $arguments))  }}
+  {{/* It's a string */}}
+  <span class="string" style="display:inline-block; background-color:yellow">{{ $arguments }} </span>
+
+{{ else  if (reflect.IsSlice $arguments) }}
+  {{/* It's a slice */}}
+  {{ $recursions =add .recursions 1 }}
+  <hr style="border-top:5px solid fuchsia" />
+  {{ range $arguments }}
+  <div class="slicenode recursions{{ $recursions }}">
+    {{ partial "diggerfish.html" (dict "current" . "recursions" $recursions )  }}
+  </div>
+  {{ end }}
+
+{{ else  if (reflect.IsMap $arguments) }}
+
+   
+    {{/* $arguments */}}
+    {{ $level := "notspecifiedlevel"  }}
+    {{ if  (index $arguments "level")  }}
+      {{ $level = $arguments.level  }}
+    {{ end }}
+  
+    <div class="level-{{  $level  }} recursions{{ $recursions }}">
+      {{/*  {{ if  (eq $level "file")  }} FILES {{ end }}  */}}
+      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
+      {{- $aid := index $arguments "id" -}}
+      {{- $dates := index $arguments "did" 0 "unitdate"  -}}
+      {{- $physdesc := index $arguments "did" 0 "physdesc"  -}}
+      
+      {{- $recursions := add $recursions 1 -}}
+      {{- if (reflect.IsMap ($unittitle)) -}}
+        {{- $unittitle = $unittitle.value -}}
+        
+        {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
+      
+        {{- if (lt $recursions 7 ) -}}
+          <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- $unittitle -}}</h{{- $recursions -}}>
+        {{- else }}
+          <div class="unittitle" id ="{{ $aid }}" >{{- $unittitle -}} </div>
+        {{- end }}
+      {{- end }}
+      
+      {{- if ($dates) -}} 
+      <div class="famd dates"><div class="label">Dates: </div> 
+        {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
+      {{- end }}
+      
+      {{- if ($physdesc) -}} 
+        <div class="famd physdesc"><div class="label">Extent: </div>
+        {{- range $physdesc -}}{{-  .extent.value -}}{{- end -}}
+        </div>
+      {{- end }}    
+       
+      
+     
+    {{ range $arguments.scopecontent }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
+    {{ end }}
+    {{ range $arguments.arrangement }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" $recursions) -}}
+    {{ end }}
+    {{ range $arguments.bioghist }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.accessrestrict }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.accruals }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "accruals" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.appraisal }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "appraisal" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.relatedmaterial }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.custodhist }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "custodhist" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.userestrict }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "userestrict" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.prefercite }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "prefercite" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.processinfo }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "processinfo" "recursions" $recursions) -}}
+    {{- end -}}
+    {{ range $arguments.phystech }}
+      {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
+    {{- end -}}
+
+
+    {{/*   */}}
+    {{ if not (ge $recursions 9 )  }}
+      {{ if  ($arguments.c)  }} 
+      {{/*  {{ $recursions =add .recursions 1 }}  */}}
+        {{ range $arguments.c }}
+               {{ partial "diggerfish.html" (dict "current" . "recursions" $recursions )  }}  
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{/*  */}}
+  </div>
+{{ end }}
