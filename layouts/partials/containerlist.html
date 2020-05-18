@@ -19,10 +19,12 @@
     {{ $burl := .Site.BaseURL}}
     {{ $pid :=  .Params.identifier }}
     {{ $rid :=  .Params.repoidentifier }}
+  
     <ul class="list-unstyled components">
     {{- range $components}}
       {{- $cid := index . "id" }}
-      <li><a href="{{ $burl }}guides/{{ $rid }}/{{ $pid }}/contents.html#{{ $cid }}">{{ index . "did" 0 "unittitle" 0  "value"}}</a></li>
+      {{- $ut := index . "did" 0 "unittitle" 0  "value" }}
+      <li><a href="{{ $burl }}guides/{{ $rid }}/{{ $pid }}/contents.html#{{ $cid }}">{{ $ut | safeHTML  }}</a></li>
     {{ end }}
   </ul>
 </nav>

@@ -5,12 +5,12 @@
 {{ $h := add .recursions 1 }}
 
 <div class="formattednote {{ $classname }}" id ="{{ .current.id }}">
-  <h{{- $h  }} class="formattednote-header">{{range .current.head }}{{ . }}{{ end }}</h{{- $h  }}>
+  <h{{- $h  }} class="formattednote-header">{{range .current.head }}{{ .value }}{{ end }}</h{{- $h  }}>
   <div>
     {{ if not (or (reflect.IsSlice .current.p) (reflect.IsMap .current.p))  }}
       {{ .current.p }}  
     {{ else  if (reflect.IsSlice .current.p) }}
-      {{ range .current.p }}<p> {{ htmlUnescape . | safeHTML }} </p>{{ end }}
+      {{ range .current.p }}<p> {{ htmlUnescape .value | safeHTML }} </p>{{ end }}
     {{ else  if (reflect.IsMap .current.p) }}
       {{ .current.p.value }}  
     {{ end }}

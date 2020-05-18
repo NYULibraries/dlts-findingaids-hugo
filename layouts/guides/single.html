@@ -8,12 +8,13 @@
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   
-  {{ $data := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" 0 }}
-  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" }}
+  {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
+  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 }}
+  {{ $filedesc := index $eadheader "filedesc" }}
   
-  {{- if $data }}
+  {{- if $archdesc }}
   
-  {{- $did := index $data "did" }}
+  {{- $did := index $archdesc "did" }}
   {{ if (reflect.IsSlice ($did )) }}
   {{ $did = index $did 0 }}
   {{ end }}
@@ -27,79 +28,89 @@
 
   <div class="publisher">
   
-    <h3>Publisher</h3>
-    {{- $publisher :=  $eadheader.filedesc.publicationstmt.publisher -}}
-    {{ if (reflect.IsMap $publisher) }}
-    {{ $publisher = $publisher.value }}
+    <h3 class="formattednote-header">Publisher</h3>
+    {{ $publisher := "Not Specified / info not located" }}
+    {{ range $filedesc }}
+      {{ range .publicationstmt }}
+        {{ range .publisher }}
+          {{  $publisher = . }}
+        {{ end }}
+      {{ end }}
     {{ end }}
     <div>{{ $publisher }}</div>
   </div>
   
-  {{ range $data.acqinfo }}
+ 
+  <div class="famd physdesc "><h3 class="label formattednote-header">Extent</h3>
+  {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
+  </div>
+  
+
+  {{ range $archdesc.acqinfo }}
     {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
   
-  {{ range $data.bioghist }}
+  {{ range $archdesc.bioghist }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
   {{- end -}}
 
-  {{ range $data.scopecontent }}
+  {{ range $archdesc.scopecontent }}
     {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.accessrestrict }}
+  {{ range $archdesc.accessrestrict }}
     {{- partial "formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.userestrict }}
+  {{ range $archdesc.userestrict }}
     {{- partial "formattednote.html" (dict "current" . "classname" "userestrict" "recursions" 2) -}}
   {{- end -}}
 
-  {{ range $data.prefercite }}
+  {{ range $archdesc.prefercite }}
     {{- partial "formattednote.html" (dict "current" . "classname" "prefercite" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.processinfo }}
+  {{ range $archdesc.processinfo }}
     {{- partial "formattednote.html" (dict "current" . "classname" "processinfo" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.arrangement }}
+  {{ range $archdesc.arrangement }}
     {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.custodhist }}
+  {{ range $archdesc.custodhist }}
     {{- partial "formattednote.html" (dict "current" . "classname" "custodhist" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.phystech }}
+  {{ range $archdesc.phystech }}
     {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.appraisal }}
+  {{ range $archdesc.appraisal }}
     {{- partial "formattednote.html" (dict "current" . "classname" "appraisal" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.separatedmaterial }}
+  {{ range $archdesc.separatedmaterial }}
     {{- partial "formattednote.html" (dict "current" . "classname" "separatedmaterial" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.relatedmaterial }}
+  {{ range $archdesc.relatedmaterial }}
     {{- partial "formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.accruals }}
+  {{ range $archdesc.accruals }}
     {{- partial "formattednote.html" (dict "current" . "classname" "accruals" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.altformatavailable }}
+  {{ range $archdesc.altformatavailable }}
     {{- partial "formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.odd }}
+  {{ range $archdesc.odd }}
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $data.bibliography }}
+  {{ range $archdesc.bibliography }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
   {{- end -}}
   
@@ -107,7 +118,7 @@
     
     <p>No data found at node "archdesc"</p>
     
-    {{ end }}
+  {{ end }}
 
   </main></div>
 

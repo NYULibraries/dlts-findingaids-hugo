@@ -1,10 +1,10 @@
-{{- $titleproper := index .Site.Data .Params.repoidentifier .Params.identifier  "eadheader" "filedesc" "titlestmt" "titleproper" }}
+{{- $titleproper := index .Site.Data .Params.repoidentifier .Params.identifier  "eadheader" 0 "filedesc" 0 "titlestmt" 0 "titleproper"  }}
 {{- if (reflect.IsSlice ($titleproper)) }}
       {{- $titleproper = index $titleproper 0 "value" }}
   {{- end }}
   {{- if (reflect.IsMap ($titleproper)) }}
    
-        {{- $titleproper = index $titleproper "#text" }}
+        {{- $titleproper = index $titleproper "value" }}
   
   {{- end -}}
  {{ $titleproper =  $titleproper | safeHTML }}

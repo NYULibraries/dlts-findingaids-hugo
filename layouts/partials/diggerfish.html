@@ -42,9 +42,9 @@
         {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
       
         {{- if (lt $recursions 7 ) -}}
-          <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- $unittitle -}}</h{{- $recursions -}}>
+          <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}</h{{- $recursions -}}>
         {{- else }}
-          <div class="unittitle" id ="{{ $aid }}" >{{- $unittitle -}} </div>
+          <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
         {{- end }}
       {{- end }}
       
@@ -53,11 +53,13 @@
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end }}
       
+    
+       
       {{- if ($physdesc) -}} 
-        <div class="famd physdesc"><div class="label">Extent: </div>
-        {{- range $physdesc -}}{{-  .extent.value -}}{{- end -}}
-        </div>
-      {{- end }}    
+      <div class="famd physdesc "><h3 class="label formattednote-header">Extent</h3> 
+        {{- range $physdesc -}}{{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
+       </div>   
+       {{- end }} 
        
       
      
