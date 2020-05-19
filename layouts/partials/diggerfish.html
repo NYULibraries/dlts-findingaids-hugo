@@ -49,15 +49,19 @@
       {{- end }}
       
       {{- if ($dates) -}} 
-      <div class="famd dates"><div class="label">Dates: </div> 
+      <div class="dates"><div class="label  formattednote-header">Dates: </div> 
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end }}
       
     
        
       {{- if ($physdesc) -}} 
-      <div class="famd physdesc "><h3 class="label formattednote-header">Extent</h3> 
-        {{- range $physdesc -}}{{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
+      <div class="physdesc "><h3 class="label formattednote-header">Extent</h3> 
+        {{- range $physdesc -}}
+        {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
+        {{- if .extent -}}
+         {{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
+        {{- end -}}
        </div>   
        {{- end }} 
        
