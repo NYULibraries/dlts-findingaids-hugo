@@ -11,7 +11,15 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/archives/photo_00001/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/archives/rg_9_8/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_208/</loc>
   </url>
   
   <url>
@@ -39,11 +47,31 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/tamwag/photos_223/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/tamwag/tam_132/</loc>
   </url>
   
   <url>
     <loc>http://localhost/findingaids/guides/tamwag/tam_439/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/tam_616/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/tam_691/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/tam_693/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/wag_357/</loc>
   </url>
   
   <url>
