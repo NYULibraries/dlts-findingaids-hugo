@@ -1,6 +1,6 @@
 baseURL = "http://localhost/findingaids/"
 languageCode = "en-us"
-title = "Finding Aids Work in Progress"
+title = "Finding Aids Data Model 3"
 disableKinds = ["taxonomy", "taxonomyTerm"]
  
 [params]
