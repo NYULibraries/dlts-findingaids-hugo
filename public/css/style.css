@@ -313,7 +313,7 @@ main#content {
 
 
 .recursions2, .recursions3, .recursions4 {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 .emph, .emph-italic, .ead-emph-italic, .ead-emph {
     font-style: italic;
@@ -353,11 +353,26 @@ main#content {
       font-weight: normal;
       font-size: 1.1rem;
   }
-  .formattednote-header {
+.formattednote-header {
       text-transform: uppercase;
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin: 20px 0 10px;;
   }
+.level-item .formattednote-header, .level-file .formattednote-header {
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin: 5px 15px 5px 0;
+    display: inline-block;
+}
+.level-item .unittitle, .level-file .unittitle {
+    font-size:1.2rem;
+}
 .unittitle {
     margin-top: 20px;
+}
+
+.level-item, .level-file {
+    border-top: 1px solid #cccccc;
+  
+    margin-top: 12px;
 }
