@@ -40,12 +40,15 @@
     <div>{{ $publisher }}</div>
   </div>
   
- 
-  <div class="famd physdesc "><h3 class="label formattednote-header">Extent</h3>
+  <div class="physdesc"><h3 class="label formattednote-header">Extent</h3>
   {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
   </div>
-  
-
+ 
+  {{ range $did.abstract }}
+    <div class="abstract "><h3 class="label formattednote-header">Abstract</h3>
+    <p>{{- .value  | safeHTML  }}</p></div>
+  {{ end -}}
+    
   {{ range $archdesc.acqinfo }}
     {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
