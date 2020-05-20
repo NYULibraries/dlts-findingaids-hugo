@@ -29,7 +29,7 @@
   <div class="publisher">
   
     <h3 class="formattednote-header">Publisher</h3>
-    {{ $publisher := "Not Specified / info not located" }}
+    {{ $publisher := "Not Specified or info not located" }}
     {{ range $filedesc }}
       {{ range .publicationstmt }}
         {{ range .publisher }}
@@ -40,8 +40,14 @@
     <div>{{ $publisher }}</div>
   </div>
   
+  {{ $r := index $did "repository"  }}
+  {{ range $r }}<div class="repository">
+    <h3 class="formattednote-header">repository</h3>
+    {{ range .corpname }}{{ . }}{{ end }}
+  </div>{{ end }}
+ 
   <div class="physdesc"><h3 class="label formattednote-header">Extent</h3>
-  {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
+  {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value | safeHTML }}</span> {{ end -}}<br>{{- end -}}
   </div>
  
   {{ range $did.abstract }}
@@ -53,8 +59,33 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
   
+  {{- range $archdesc.bibliography -}}
+  <div class="bibliography" id="{{- .id }}"><h3 class="label formattednote-header">{{- index .head 0 "value"}}</h3>
+    {{- range .bibref -}}{{ .value | safeHTML  -}}<br>{{- end -}}
+    </div>
+    {{- end -}}
+    
   {{ range $archdesc.bioghist }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
+  {{- end -}}
+
+  {{ range $archdesc.controlaccess }}
+  <div class="controlaccess" >
+  <h3 class="label formattednote-header">Controlaccess</h3>
+    {{ range $i, $e :=  .corpname }}
+      {{- if $i -}}, {{ else }} <h4>corpname</h4> {{ end -}}
+      {{- . }} 
+    {{- end -}}
+    {{ range $i, $e :=  .genreform }}
+      {{- if $i -}}, {{ else }} <h4>genreform</h4> {{ end -}}{{- . }} 
+    {{- end -}}
+    {{ range $i, $e :=  .persname }}
+      {{- if $i -}}, {{ else }} <h4>persname</h4> {{ end -}}{{- . }} 
+    {{- end -}}
+    {{ range $i, $e :=  .subject }}
+    {{- if $i -}}, {{ else }} <h4>subject</h4> {{ end -}}{{- . }} 
+    {{- end -}}
+  </div>    
   {{- end -}}
 
   {{ range $archdesc.scopecontent }}
