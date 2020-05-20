@@ -88,6 +88,8 @@
   </div>    
   {{- end -}}
 
+
+  
   {{ range $archdesc.scopecontent }}
     {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
   {{- end -}}
@@ -144,15 +146,15 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
   
-  {{ range $archdesc.bibliography }}
+  <!-- {{ range $archdesc.bibliography }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
-  {{- end -}}
+  {{- end -}} -->
   
-  {{ else }}
+  {{- else -}}
     
     <p>No data found at node "archdesc"</p>
     
-  {{ end }}
+  {{- end -}}
 
   </main></div>
 
