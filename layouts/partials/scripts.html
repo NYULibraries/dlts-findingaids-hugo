@@ -11,3 +11,7 @@
         });
     });
 </script>
+
+{{ $opts := dict "noComments" true }}
+{{- $transpiled := resources.Get "js/main.js" | babel $opts -}}
+<script src="{{ $transpiled.Permalink | relURL }}"></script>
