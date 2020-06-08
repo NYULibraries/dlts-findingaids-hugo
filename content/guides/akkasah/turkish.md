@@ -1,5 +1,5 @@
 +++
-repoidentifier = "nyuad"
+repoidentifier = "akkasah"
 identifier = "turkish"
 guidetitle = "AD.MC.007 Akkasah Turkey Collection"
 +++
