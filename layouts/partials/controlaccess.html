@@ -27,7 +27,7 @@
       {{ range $i, $e :=  .current.genreform -}}
       <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
       {{- end }}
-  </div>
+    </div>
   {{- end -}}
   
   {{- if .current.persname }}
