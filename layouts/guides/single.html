@@ -70,25 +70,8 @@
   {{- end -}}
 
   {{ range $archdesc.controlaccess }}
-  <div class="controlaccess" >
-  <h3 class="label formattednote-header">Controlaccess</h3>
-    {{ range $i, $e :=  .corpname }}
-      {{- if $i -}}, {{ else }} <h4>corpname</h4> {{ end -}}
-      {{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .genreform }}
-      {{- if $i -}}, {{ else }} <h4>genreform</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .persname }}
-      {{- if $i -}}, {{ else }} <h4>persname</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .subject }}
-    {{- if $i -}}, {{ else }} <h4>subject</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-  </div>    
+  {{ partial "controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" 2 ) -}}   
   {{- end -}}
-
-
   
   {{ range $archdesc.scopecontent }}
     {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
