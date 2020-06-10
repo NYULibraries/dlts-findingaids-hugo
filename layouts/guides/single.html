@@ -40,7 +40,16 @@
     <div>{{ $publisher }}</div>
   </div>
   
-  {{ $r := index $did "repository"  }}
+  <div class="unit_id">
+    <h3 class="formattednote-header">Unit ID</h3>
+    {{- $unit_id := "Not Specified or info not located" -}}
+    {{- range $did.unitid }}
+      {{-  $unit_id = .value }}
+    {{- end }}
+    <div>{{ $unit_id }}</div>
+  </div>
+  
+  {{- $r := index $did "repository"  }}
   {{ range $r }}<div class="repository">
     <h3 class="formattednote-header">repository</h3>
     {{ range .corpname }}{{ . }}{{ end }}
