@@ -49,6 +49,15 @@
     <div>{{ $unit_id }}</div>
   </div>
   
+  <div class="unit_date">
+    <h3 class="formattednote-header">Unit Date</h3>
+    {{- $unit_date := "Not Specified or info not located" -}}
+    {{- range $did.unitdate }}
+      {{-  $unit_date = .value }}
+    {{- end }}
+    <div>{{ $unit_date }}</div>
+  </div>
+  
   {{- $r := index $did "repository"  }}
   {{ range $r }}<div class="repository">
     <h3 class="formattednote-header">repository</h3>
