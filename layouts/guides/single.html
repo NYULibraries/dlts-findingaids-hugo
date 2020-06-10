@@ -58,6 +58,29 @@
     <div>{{ $unit_date }}</div>
   </div>
   
+  {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "author" )) }}
+  <div class="author">
+    <h3 class="formattednote-header">Collection processed by</h3>
+    {{- range $filedesc }}
+      {{- range .titlestmt }}
+        {{- range .author -}}
+        <div>{{ . }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }} 
+  </div>{{- end -}} 
+  {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "sponsor" )) }}
+  <div class="sponsor">
+    <h3 class="formattednote-header">Sponsor</h3>
+    {{- range $filedesc }}
+      {{- range .titlestmt }}
+        {{- range .sponsor -}}
+        <div>{{ . }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }} 
+  </div>{{- end -}} 
+  
   {{- $r := index $did "repository"  }}
   {{ range $r }}<div class="repository">
     <h3 class="formattednote-header">repository</h3>
