@@ -19,6 +19,24 @@
       {{- end }}
     </div>
   {{- end }}
+  {{- if .current.famname -}}
+  {{ $lastindex := sub (len .current.famname) 1 -}}
+  <h{{- $hnext  }}>famname</h{{- $hnext  }}>
+  <div>
+    {{ range $i, $e :=  .current.famname -}}
+    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end }}
+  </div>  
+  {{- end -}}
+  {{- if .current.function -}}
+  {{ $lastindex := sub (len .current.function) 1 -}} 
+  <h{{- $hnext  }}>function</h{{- $hnext  }}>
+  <div>
+    {{ range $i, $e :=  .current.function -}}
+    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end }}
+  </div>  
+  {{- end }}
   
   {{ if .current.genreform -}}
     {{ $lastindex := sub (len .current.genreform) 1 -}}
