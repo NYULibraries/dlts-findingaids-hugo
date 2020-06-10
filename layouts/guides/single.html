@@ -40,6 +40,23 @@
     <div>{{ $publisher }}</div>
   </div>
   
+  {{ if (reflect.IsSlice (index $eadheader "profiledesc" )) }}
+  <div class="profiledesc">
+    <h3 class="formattednote-header">profiledesc</h3>
+    {{- range (index $eadheader "profiledesc" ) }}
+      {{- range .creation -}}
+      <div class="creation">{{ .value  }} <span class="date">{{ .date  }}</span></div>
+      {{- end }}
+      {{ range .descrules -}}
+      <div class="descrules">Using <i>{{ .}}</i></div>
+      {{- end }}
+      {{ range .langusage -}}
+      <div class="langusage">Language: {{ .}}</div>
+      {{- end }}
+   
+    {{- end }} 
+  </div>{{- end }}
+  
   <div class="unit_id">
     <h3 class="formattednote-header">Unit ID</h3>
     {{- $unit_id := "Not Specified or info not located" -}}
