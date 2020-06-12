@@ -31,6 +31,7 @@
     <div class="level-{{  $level  }} recursions{{ $recursions }}">
       {{/*  {{ if  (eq $level "file")  }} FILES {{ end }}  */}}
       {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
+      {{- $langmaterial := index $arguments "did" 0 "langmaterial"  -}}    
       {{- $aid := index $arguments "id" -}}
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
       {{- $physdesc := index $arguments "did" 0 "physdesc"  -}}
@@ -52,9 +53,24 @@
       <div class="dates"><div class="label  formattednote-header">Dates: </div> 
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end }}
-      
-    
-       
+        {{- if $langmaterial }}
+        <div class="langmaterial">
+        <div class="label  formattednote-header">langmaterial:</div>
+        {{- range $i, $e :=  $langmaterial -}}
+          {{/*  One model for langmaterial  */}}
+          {{- if $e.language -}}
+            <span class= "langmaterial1" >
+            {{- $lastindex := sub (len $e.language) 1 -}}
+            {{- range $x, $y :=  $e.language -}}
+                 {{- $y.value -}}{{- if ne $x $lastindex -}}, {{- end -}}
+            {{- end -}}</span>
+          {{- else if $e.value -}}
+          {{/*  Different model for langmaterial  */}}
+            <span class= "langmaterial2" id ="{{ $e.id }}">{{ $e.value }}</div>
+          {{- end -}}
+        {{- end -}}
+        </div>
+      {{- end -}}
       {{- if ($physdesc) -}} 
       <div class="physdesc "><h3 class="label formattednote-header">Extent</h3> 
         {{- range $physdesc -}}
