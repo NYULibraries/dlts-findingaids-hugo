@@ -29,7 +29,6 @@
   <div class="publisher">
   
     <h3 class="formattednote-header">Publication Statement</h3>
-    {{ $publisher := "Not Specified or info not located" }}
     {{ range $filedesc }}
       {{ range .publicationstmt }}
         {{- if .publisher }}
@@ -43,7 +42,6 @@
         {{- end }}
       {{- end }}
     {{- end }}
-    <div>{{ $publisher }}</div>
   </div>
   
   {{ if (reflect.IsSlice (index $eadheader "profiledesc" )) }}
