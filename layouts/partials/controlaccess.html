@@ -15,7 +15,7 @@
     <h{{- $hnext  }}>corpname</h{{- $hnext  }}>
     <div>
       {{ range $i, $e :=  .current.corpname -}}
-      <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+      <span class="corpname-value">{{- .value -}}</span> {{- if .role -}}<span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
       {{- end }}
     </div>
   {{- end }}
@@ -32,7 +32,7 @@
   {{ $lastindex := sub (len .current.function) 1 -}} 
   <h{{- $hnext  }}>function</h{{- $hnext  }}>
   <div>
-    {{ range $i, $e :=  .current.function -}}
+    {{- range $i, $e :=  .current.function -}}
     <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
     {{- end }}
   </div>  
@@ -49,14 +49,15 @@
   {{- end -}}
   
   {{- if .current.persname }}
-  {{ $lastindex := sub (len .current.persname) 1 -}}
+  {{- $lastindex := sub (len .current.persname) 1 -}}
   <h{{- $hnext  }}>persname</h{{- $hnext  }}>
     <div>
-    {{ range $i, $e :=  .current.persname -}}
-    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
-    {{- end }}
-  </div>
+      {{- range $i, $e :=  .current.persname -}}
+        <span class="persname-value">{{- .value -}}</span> {{- if .role -}}<span class="persname-role">Role: {{- .role -}}</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
+      {{- end }}
+    </div>
   {{- end -}}
+
   
   {{- if .current.subject }}
     {{- $lastindex := sub (len .current.subject) 1 -}}
