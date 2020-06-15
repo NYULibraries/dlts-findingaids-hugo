@@ -69,9 +69,19 @@
         ],
         "controlaccess": [
             {
+                "corpname": [
+                    {
+                        "value": "New York University. University Heights"
+                    }
+                ],
                 "genreform": [
                     "Correspondence.",
                     "Questionnaires."
+                ],
+                "persname": [
+                    {
+                        "value": "John Quigley, 1872-1943"
+                    }
                 ]
             }
         ],
@@ -87,6 +97,16 @@
                     {
                         "id": "aspace_1c5d2b756e12bfc9553851ce3d0379bf",
                         "value": "Materials are in English."
+                    }
+                ],
+                "origination": [
+                    {
+                        "label": "Creator",
+                        "persname": [
+                            {
+                                "value": "Rose, Oscar"
+                            }
+                        ]
                     }
                 ],
                 "physdesc": [
@@ -110,7 +130,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "New York University Archives"
+                            {
+                                "value": "New York University Archives"
+                            }
                         ]
                     }
                 ],
@@ -1609,6 +1631,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "New York University Archives",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003en.d.\u003c/span\u003e"
@@ -1635,7 +1658,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 15:48:05 -0400"
+                                "2020-06-10 15:21:13 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

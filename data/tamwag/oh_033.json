@@ -82,7 +82,10 @@
                     "Lower East Side (New York, N.Y.) -- History -- 20th century."
                 ],
                 "persname": [
-                    "Bernhardt, Debra E."
+                    {
+                        "role": "dnr",
+                        "value": "Bernhardt, Debra E."
+                    }
                 ],
                 "subject": [
                     "Tenement houses -- New York (State) -- New York.",
@@ -117,9 +120,44 @@
                 ],
                 "origination": [
                     {
+                        "label": "Creator",
+                        "corpname": [
+                            {
+                                "value": "New York University. Department of History"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Creator",
+                        "corpname": [
+                            {
+                                "value": "Henry Street Settlement (New York, N.Y.)"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Creator",
+                        "corpname": [
+                            {
+                                "value": "Lower East Side Tenement Museum"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Creator",
+                        "corpname": [
+                            {
+                                "value": "Workmen's Circle/Arbeter Ring"
+                            }
+                        ]
+                    },
+                    {
                         "label": "source",
                         "persname": [
-                            "Bernhardt, Debra E."
+                            {
+                                "role": "dnr",
+                                "value": "Bernhardt, Debra E."
+                            }
                         ]
                     }
                 ],
@@ -183,7 +221,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "Tamiment Library and Robert F. Wagner Labor Archives"
+                            {
+                                "value": "Tamiment Library and Robert F. Wagner Labor Archives"
+                            }
                         ]
                     }
                 ],
@@ -510,12 +550,20 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Juilliard School"
+                                            {
+                                                "value": "Juilliard School"
+                                            }
                                         ],
                                         "persname": [
-                                            "Spofford, Grace",
-                                            "Galamian, Ivan",
-                                            "Scholz, Robert, 1902-1986"
+                                            {
+                                                "value": "Spofford, Grace"
+                                            },
+                                            {
+                                                "value": "Galamian, Ivan"
+                                            },
+                                            {
+                                                "value": "Scholz, Robert, 1902-1986"
+                                            }
                                         ],
                                         "subject": [
                                             "Flute -- Instruction and study -- New York (State) -- New York.",
@@ -590,10 +638,14 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Mobilization for Youth"
+                                            {
+                                                "value": "Mobilization for Youth"
+                                            }
                                         ],
                                         "persname": [
-                                            "Hall, Helen"
+                                            {
+                                                "value": "Hall, Helen"
+                                            }
                                         ]
                                     }
                                 ],
@@ -713,12 +765,20 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Juilliard School"
+                                            {
+                                                "value": "Juilliard School"
+                                            }
                                         ],
                                         "persname": [
-                                            "Suzuki, Shinichi, 1898-1998",
-                                            "Spofford, Grace",
-                                            "Egan, Robert F., 1924-"
+                                            {
+                                                "value": "Suzuki, Shinichi, 1898-1998"
+                                            },
+                                            {
+                                                "value": "Spofford, Grace"
+                                            },
+                                            {
+                                                "value": "Egan, Robert F., 1924-"
+                                            }
                                         ],
                                         "subject": [
                                             "Violin -- Instruction and study -- New York (State) -- New York.",
@@ -1177,7 +1237,9 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Auschwitz (Concentration camp)"
+                                            {
+                                                "value": "Auschwitz (Concentration camp)"
+                                            }
                                         ],
                                         "subject": [
                                             "Holocaust survivors -- United States -- Interviews."
@@ -1316,7 +1378,9 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Hashomer Hatzair"
+                                            {
+                                                "value": "Hashomer Hatzair"
+                                            }
                                         ]
                                     }
                                 ],
@@ -1522,11 +1586,17 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Henry Street Settlement (New York, N.Y.). Music School"
+                                            {
+                                                "value": "Henry Street Settlement (New York, N.Y.). Music School"
+                                            }
                                         ],
                                         "persname": [
-                                            "Scholz, Robert, 1902-1986",
-                                            "Giorni, Aurelio, 1895-1938"
+                                            {
+                                                "value": "Scholz, Robert, 1902-1986"
+                                            },
+                                            {
+                                                "value": "Giorni, Aurelio, 1895-1938"
+                                            }
                                         ],
                                         "subject": [
                                             "Piano -- Instruction and study -- New York (State) -- New York.",
@@ -1985,7 +2055,12 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Ferrer Colony (Stelton, N.J.)"
+                                            {
+                                                "value": "Ferrer Colony (Stelton, N.J.)"
+                                            },
+                                            {
+                                                "value": "Modern School (Stelton, N.J.)"
+                                            }
                                         ],
                                         "subject": [
                                             "Women and anarchism -- United States."
@@ -3324,7 +3399,9 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Henry Street Settlement (New York, N.Y.). Music School"
+                                            {
+                                                "value": "Henry Street Settlement (New York, N.Y.). Music School"
+                                            }
                                         ]
                                     }
                                 ],
@@ -3636,6 +3713,15 @@
                                         "p": [
                                             {
                                                 "value": "Michael Katz was born in 1912.  His family was Jewish and had five brothers and one sister.  His parents immigrated to the United States from Poland, via England, and settled in the Lower East Side (LES) neighborhood of Manhattan, New York.  His father worked as machine operator in a garment factory and a dishwasher.  Katz attended Seward Park High School in the LES.  He was a founding member of the Henry Street Oldtimers at the Henry Street Settlement in the LES and served as the president of the Henry Street Settlement Federal Credit Union.  He married and had children.  He worked as a salesman."
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "controlaccess": [
+                                    {
+                                        "corpname": [
+                                            {
+                                                "value": "Henry Street Settlement (New York, N.Y.)"
                                             }
                                         ]
                                     }
@@ -4645,6 +4731,20 @@
                                         "p": [
                                             {
                                                 "value": "Frieda \"Fritzie\" Wolkofsky Meyerhoffer was born in 1913 in Manhattan, New York.  She was one of seven children.  Her parents immigrated to the United States from Russia, her mother from Minsk and her father from Vilna.  Her father worked in a millinery factory and volunteered as a receptionist at the Henry Street Settlement in the Lower East Side (LES) neighborhood of Manhattan for 25 years.  Her mother worked as a seamstress and janitor, and was actively involved in the Settlement's Mothers' Clubs and Echo Hill Farm camp in Yorktown Heights, New York.  Meyerhoffer attended kindergarten at the Settlement and Public School 147 in the LES.  She married in 1939 and two children.  Her husband worked in a printing factory and at a gas station.  She moved into the Vladeck Houses in the LES in 1954 and was a resident at the time of the interview."
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "controlaccess": [
+                                    {
+                                        "corpname": [
+                                            {
+                                                "value": "Henry Street Settlement (New York, N.Y.)"
+                                            }
+                                        ],
+                                        "persname": [
+                                            {
+                                                "value": "Wald, Lillian D., 1867-1940"
                                             }
                                         ]
                                     }
@@ -6955,7 +7055,9 @@
                                 "controlaccess": [
                                     {
                                         "corpname": [
-                                            "Ferrer Colony (Stelton, N.J.)"
+                                            {
+                                                "value": "Ferrer Colony (Stelton, N.J.)"
+                                            }
                                         ],
                                         "subject": [
                                             "Women and anarchism -- United States."
@@ -8275,7 +8377,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "Asian Americans for Action"
+                                                    {
+                                                        "value": "Asian Americans for Action"
+                                                    }
                                                 ],
                                                 "subject": [
                                                     "Japanese Americans -- Evacuation and relocation, 1942-1945",
@@ -8823,7 +8927,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    {
+                                                        "value": "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    }
                                                 ]
                                             }
                                         ],
@@ -8894,7 +9000,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    {
+                                                        "value": "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    }
                                                 ],
                                                 "geogname": [
                                                     "East Harlem (New York, N.Y.) -- Race relations."
@@ -8971,7 +9079,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    {
+                                                        "value": "East Harlem Protestant Parish (New York, N.Y.)"
+                                                    }
                                                 ]
                                             }
                                         ],
@@ -9737,7 +9847,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "Amalgamated Dwellings (New York, N.Y.)"
+                                                    {
+                                                        "value": "Amalgamated Dwellings (New York, N.Y.)"
+                                                    }
                                                 ],
                                                 "subject": [
                                                     "Apartment houses, Cooperative -- New York (State) -- New York."
@@ -9862,7 +9974,9 @@
                                         "controlaccess": [
                                             {
                                                 "corpname": [
-                                                    "Seward Park Cooperative (New York, N.Y.)"
+                                                    {
+                                                        "value": "Seward Park Cooperative (New York, N.Y.)"
+                                                    }
                                                 ],
                                                 "subject": [
                                                     "Apartment houses, Cooperative -- New York (State) -- New York."
@@ -10278,6 +10392,11 @@
                                         ],
                                         "controlaccess": [
                                             {
+                                                "corpname": [
+                                                    {
+                                                        "value": "Three Arrows Cooperative Society, Inc."
+                                                    }
+                                                ],
                                                 "subject": [
                                                     "Women socialists -- New York (State) -- New York -- Interviews.",
                                                     "Cooperative societies -- New York (State)."
@@ -10431,6 +10550,11 @@
                                         ],
                                         "controlaccess": [
                                             {
+                                                "corpname": [
+                                                    {
+                                                        "value": "Three Arrows Cooperative Society, Inc."
+                                                    }
+                                                ],
                                                 "subject": [
                                                     "Cooperative societies -- New York (State).",
                                                     "Jewish socialists -- New York (State) -- New York -- Interviews."
@@ -12394,6 +12518,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003eMay 2017\u003c/span\u003e"
@@ -12420,7 +12545,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 15:53:47 -0400"
+                                "2020-06-10 16:32:16 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

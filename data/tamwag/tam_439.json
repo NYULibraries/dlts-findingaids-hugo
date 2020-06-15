@@ -78,6 +78,14 @@
         ],
         "controlaccess": [
             {
+                "corpname": [
+                    {
+                        "value": "United States. Congress. House. -- Committee on Un-American Activities"
+                    },
+                    {
+                        "value": "Camp \"Kinderland\" (Hopewell Junction, N.Y.)"
+                    }
+                ],
                 "genreform": [
                     "Clippings (information artifacts)",
                     "Financial records",
@@ -85,6 +93,25 @@
                     "Photographs.",
                     "Minutes (administrative records)",
                     "Songbooks."
+                ],
+                "persname": [
+                    {
+                        "value": "Suller, Elsie."
+                    },
+                    {
+                        "value": "Segal, Edith, 1902-"
+                    },
+                    {
+                        "value": "Seeger, Pete, 1919-2014"
+                    },
+                    {
+                        "role": "dnr",
+                        "value": "Falk, Huey"
+                    },
+                    {
+                        "role": "dnr",
+                        "value": "Itzkowitz, Fay"
+                    }
                 ],
                 "subject": [
                     "Camps -- New York (State) -- History -- 20th century.",
@@ -131,6 +158,35 @@
                         "value": "\n      \n.    "
                     }
                 ],
+                "origination": [
+                    {
+                        "label": "Creator",
+                        "corpname": [
+                            {
+                                "role": "dnr",
+                                "value": "Camp \"Kinderland\" (Hopewell Junction, N.Y.)"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "source",
+                        "persname": [
+                            {
+                                "role": "dnr",
+                                "value": "Falk, Huey"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "source",
+                        "persname": [
+                            {
+                                "role": "dnr",
+                                "value": "Itzkowitz, Fay"
+                            }
+                        ]
+                    }
+                ],
                 "physdesc": [
                     {
                         "extent": [
@@ -153,7 +209,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "Tamiment Library and Robert F. Wagner Labor Archives"
+                            {
+                                "value": "Tamiment Library and Robert F. Wagner Labor Archives"
+                            }
                         ]
                     }
                 ],
@@ -10490,6 +10548,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003e2009\u003c/span\u003e"
@@ -10516,7 +10575,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 16:08:08 -0400"
+                                "2020-06-10 16:54:38 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

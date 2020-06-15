@@ -92,7 +92,9 @@
         "controlaccess": [
             {
                 "corpname": [
-                    "Bit Rosie"
+                    {
+                        "value": "Bit Rosie"
+                    }
                 ],
                 "genreform": [
                     "Video recordings."
@@ -140,7 +142,9 @@
                     {
                         "label": "Creator",
                         "persname": [
-                            "Fournet, Adele"
+                            {
+                                "value": "Fournet, Adele"
+                            }
                         ]
                     }
                 ],
@@ -179,7 +183,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "Fales Library and Special Collections"
+                            {
+                                "value": "Fales Library and Special Collections"
+                            }
                         ]
                     }
                 ],
@@ -2116,6 +2122,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "Fales Library and Special Collections",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003eApril 2017\u003c/span\u003e"
@@ -2142,7 +2149,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 15:46:52 -0400"
+                                "2020-06-10 15:53:02 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

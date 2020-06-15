@@ -68,7 +68,10 @@
                     "Typescripts."
                 ],
                 "persname": [
-                    "Bitkower, Ellen"
+                    {
+                        "role": "dnr",
+                        "value": "Bitkower, Ellen"
+                    }
                 ],
                 "subject": [
                     "Communism -- United States -- 20th century"
@@ -93,13 +96,18 @@
                     {
                         "label": "Creator",
                         "persname": [
-                            "Levine, Abraham"
+                            {
+                                "value": "Levine, Abraham"
+                            }
                         ]
                     },
                     {
                         "label": "source",
                         "persname": [
-                            "Bitkower, Ellen"
+                            {
+                                "role": "dnr",
+                                "value": "Bitkower, Ellen"
+                            }
                         ]
                     }
                 ],
@@ -124,7 +132,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "Tamiment Library and Robert F. Wagner Labor Archives"
+                            {
+                                "value": "Tamiment Library and Robert F. Wagner Labor Archives"
+                            }
                         ]
                     }
                 ],
@@ -228,6 +238,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003e6/8/2017\u003c/span\u003e"
@@ -254,7 +265,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 16:11:32 -0400"
+                                "2020-06-10 17:04:06 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

@@ -73,6 +73,11 @@
                     "Cuba -- History --  Revolution, 1959.",
                     "Cuba -- History.",
                     "Havana (Cuba)"
+                ],
+                "persname": [
+                    {
+                        "value": "Castro, Fidel, 1926-2016"
+                    }
                 ]
             }
         ],
@@ -94,7 +99,10 @@
                     {
                         "label": "Creator",
                         "persname": [
-                            "Havens, David N."
+                            {
+                                "role": "dnr",
+                                "value": "Havens, David N."
+                            }
                         ]
                     }
                 ],
@@ -113,7 +121,9 @@
                 "repository": [
                     {
                         "corpname": [
-                            "Tamiment Library and Robert F. Wagner Labor Archives"
+                            {
+                                "value": "Tamiment Library and Robert F. Wagner Labor Archives"
+                            }
                         ]
                     }
                 ],
@@ -217,6 +227,7 @@
                             "address": [
                                 {}
                             ],
+                            "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [
                                 {
                                     "value": "\u003cspan class=\"ead-date\"\u003e3/10/2016\u003c/span\u003e"
@@ -243,7 +254,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-04-27 16:12:34 -0400"
+                                "2020-06-10 17:03:12 -0400"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }
