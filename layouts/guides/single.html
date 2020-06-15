@@ -28,15 +28,21 @@
 
   <div class="publisher">
   
-    <h3 class="formattednote-header">Publisher</h3>
+    <h3 class="formattednote-header">Publication Statement</h3>
     {{ $publisher := "Not Specified or info not located" }}
     {{ range $filedesc }}
       {{ range .publicationstmt }}
-        {{ range .publisher }}
-          {{  $publisher = . }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
+        {{- if .publisher }}
+          <div class="publicationstmt-publisher">Publisher: {{  .publisher }}</div>
+        {{- end }}
+        {{- range .address }}
+          <div class="publicationstmt-address">{{- htmlUnescape .value | safeHTML -}}</div>
+        {{- end }}
+        {{- range .p }}
+          <div  class="publicationstmt-p">{{- htmlUnescape .value | safeHTML -}}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
     <div>{{ $publisher }}</div>
   </div>
   
