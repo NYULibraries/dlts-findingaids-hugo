@@ -104,10 +104,18 @@
     {{- end }} 
   </div>{{- end -}} 
   
+  {{- $or := index $did "origination"  }}
+  <div class="origination">
+  {{ range $or }}
+    <h3 class="formattednote-header">{{ .label }}</h3>
+    {{- range .corpname -}}<span class="corpname">{{ .value }} {{- if .role -}}<span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end -}}
+    {{- range .persname -}}<span  class="persname">{{ .value }} {{- if .role -}}<span class="persname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end }}
+  {{ end }}</div>
+  
   {{- $r := index $did "repository"  }}
   {{ range $r }}<div class="repository">
-    <h3 class="formattednote-header">repository</h3>
-    {{ range .corpname }}{{ . }}{{ end }}
+    <h3 class="formattednote-header">Repository</h3>
+    {{- range .corpname -}}<span class="corpname">{{ .value }}</span>{{- if .role -}}<span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- end -}}
   </div>{{ end }}
  
   <div class="physdesc"><h3 class="label formattednote-header">Extent</h3>
