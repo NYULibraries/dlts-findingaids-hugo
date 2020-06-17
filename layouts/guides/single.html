@@ -35,8 +35,11 @@
           <div class="publicationstmt-publisher">Publisher: {{  .publisher }}</div>
         {{- end }}
         {{- range .address }}
-          <div class="publicationstmt-address">{{- htmlUnescape .value | safeHTML -}}</div>
-        {{- end }}
+          <div class="publicationstmt-address">
+          {{- range .addressline }}
+            <span class="publicationstmt-addressline">{{- htmlUnescape .value | safeHTML -}}</span>
+          {{- end }}
+        </div>{{- end }}
         {{- range .p }}
           <div  class="publicationstmt-p">{{- htmlUnescape .value | safeHTML -}}</div>
         {{- end }}

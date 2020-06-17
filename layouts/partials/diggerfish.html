@@ -76,8 +76,8 @@
           {{- end -}}
         {{- end -}}
         </div>
-      {{- end -}}
-      {{- if ($physdesc) -}} 
+      {{- end }}
+      {{ if ($physdesc) -}} 
       <div class="physdesc "><h3 class="label formattednote-header">Extent</h3> 
         {{- range $physdesc -}}
         {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
@@ -102,7 +102,7 @@
       </div>{{- end -}}
 
     {{ range $arguments.scopecontent }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
+      {{ partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
     {{ end }}
     {{ range $arguments.arrangement }}
       {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" $recursions) -}}
