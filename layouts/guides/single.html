@@ -204,6 +204,15 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
   
+  {{ range $eadheader.revisiondesc }}
+  <div class="formattednote revisiondesc" >
+      <h3>revisiondesc</h3>
+      {{- range .change }}
+      <div class="revisiondesc-change">{{range .date }}<span>{{ . }}:</span> {{- end }} {{range .item -}}{{ .value }} {{- end -}}</div>
+      {{- end -}}
+  </div>
+  {{- end }}
+  
   {{- else -}}
     
     <p>No data found at node "archdesc"</p>
