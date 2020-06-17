@@ -47,10 +47,9 @@
     {{- end }}
   </div>
   
-  {{ if (reflect.IsSlice (index $eadheader "profiledesc" )) }}
+  {{ range $eadheader.profiledesc }}
   <div class="profiledesc">
     <h3 class="formattednote-header">profiledesc</h3>
-    {{- range (index $eadheader "profiledesc" ) }}
       {{- range .creation -}}
       <div class="creation">{{ .value  }} <span class="date">{{ .date  }}</span></div>
       {{- end }}
@@ -59,9 +58,7 @@
       {{- end }}
       {{ range .langusage -}}
       <div class="langusage">Language: {{ .value }}</div>
-      {{- end }}
-   
-    {{- end }} 
+      {{- end }} 
   </div>{{- end }}
   
   <div class="unit_id">
