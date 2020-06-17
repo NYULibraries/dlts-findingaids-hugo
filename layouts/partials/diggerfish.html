@@ -86,7 +86,12 @@
         {{- end -}}
        </div>   
        {{- end }} 
-
+       {{- if ($physloc) -}}{{- range $physloc -}}
+       <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
+         {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
+        </div>   
+      {{- end -}}{{- end -}} 
+        
        {{ if ($origination) -}}
        <div class="origination">
         {{ range $origination }}

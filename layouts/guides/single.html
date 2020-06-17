@@ -120,6 +120,12 @@
   {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value | safeHTML }}</span> {{ end -}}<br>{{- end -}}
   </div>
  
+  {{ if ($did.physloc) -}}{{- range $did.physloc -}}
+  <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
+    {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
+   </div>   
+ {{- end -}}{{- end -}}
+ 
   {{ range $did.abstract }}
     <div class="abstract "><h3 class="label formattednote-header">Abstract</h3>
     <p>{{- .value  | safeHTML  }}</p></div>
