@@ -1,0 +1,14 @@
+{{/* Bibliography */}}
+
+{{- $current := .current -}}
+{{- $classname := .classname -}}
+{{- $h := add .recursions 1 -}}
+
+<div class="formattednote {{ $classname }}" id ="{{ .current.id }}">
+  <h{{- $h  }} class="formattednote-header">{{range .current.head }}{{ .value }}{{ end }}</h{{- $h  }}>
+  <div>
+    {{- range .current.bibref }}
+      {{ .value | safeHTML  -}}<br>
+    {{- end -}}
+  </div>
+</div>

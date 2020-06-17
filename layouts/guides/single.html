@@ -135,11 +135,9 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
   
-  {{- range $archdesc.bibliography -}}
-  <div class="bibliography" id="{{- .id }}"><h3 class="label formattednote-header">{{- index .head 0 "value"}}</h3>
-    {{- range .bibref -}}{{ .value | safeHTML  -}}<br>{{- end -}}
-    </div>
-    {{- end -}}
+  {{ range $archdesc.bibliography }}
+    {{ partial "fields/bibliography.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
+  {{- end -}} 
     
   {{ range $archdesc.bioghist }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
@@ -204,10 +202,6 @@
   {{ range $archdesc.odd }}
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
-  
-  <!-- {{ range $archdesc.bibliography }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
-  {{- end -}} -->
   
   {{- else -}}
     
