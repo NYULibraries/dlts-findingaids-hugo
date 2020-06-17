@@ -86,9 +86,16 @@
         {{- end -}}
        </div>   
        {{- end }} 
-       
-      
-     
+
+       {{ if ($origination) -}}
+       <div class="origination">
+        {{ range $origination }}
+          <h3 class="formattednote-header">{{ .label }}</h3>
+          {{- range .corpname -}}<span class="corpname">{{ .value }} {{- if .role -}} <span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end -}}
+          {{- range .persname -}}<span  class="persname">{{ .value }} {{- if .role -}} <span class="persname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end }}
+        {{ end }}
+      </div>{{- end -}}
+
     {{ range $arguments.scopecontent }}
       {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
     {{ end }}
