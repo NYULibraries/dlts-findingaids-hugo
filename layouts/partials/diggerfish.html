@@ -30,11 +30,17 @@
   
     <div class="level-{{  $level  }} recursions{{ $recursions }}">
       {{/*  {{ if  (eq $level "file")  }} FILES {{ end }}  */}}
-      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
-      {{- $langmaterial := index $arguments "did" 0 "langmaterial"  -}}    
       {{- $aid := index $arguments "id" -}}
-      {{- $dates := index $arguments "did" 0 "unitdate"  -}}
+      
+      {{- $abstract := index $arguments "did" 0 "abstract"  -}}
+      {{- $langmaterial := index $arguments "did" 0 "langmaterial"  -}}
+      {{- $origination := index $arguments "did" 0 "origination"  -}} 
       {{- $physdesc := index $arguments "did" 0 "physdesc"  -}}
+      {{- $physloc := index $arguments "did" 0 "physloc"  -}}
+      {{- $repository := index $arguments "did" 0 "repository"  -}}     
+      {{- $dates := index $arguments "did" 0 "unitdate"  -}}
+      {{- $unitid := index $arguments "did" 0 "unitid"  -}}  
+      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
       
       {{- $recursions := add $recursions 1 -}}
       {{- if (reflect.IsMap ($unittitle)) -}}
