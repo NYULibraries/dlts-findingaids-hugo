@@ -37,7 +37,8 @@
         {{- range .address }}
           <div class="publicationstmt-address">
           {{- range .addressline }}
-            <span class="publicationstmt-addressline">{{- htmlUnescape .value | safeHTML -}}</span>
+            <div class="publicationstmt-addressline">{{- htmlUnescape .value | safeHTML -}}  
+              {{- range .extptr -}}<a class="publicationstmt-extptr" href="{{ .href }}"> {{ .title }} </a>{{- end -}}</div>
           {{- end }}
         </div>{{- end }}
         {{- range .p }}
