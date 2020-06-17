@@ -80,6 +80,18 @@
         ],
         "did": [
             {
+                "physdesc": [
+                    {
+                        "extent": [
+                            {
+                                "value": ".75 Linear Feet"
+                            },
+                            {
+                                "value": "in 1 manuscript box and 1 half manuscript box"
+                            }
+                        ]
+                    }
+                ],
                 "abstract": [
                     {
                         "value": "The Abraham Levine Papers (dated 1938-1948) consist of correspondence and drafts related to Abraham Levine's political activities. Levine was a rank-and-file member of Trotskyist movement, and his papers provide a window into the ways in which everyday members of the movement interpreted current affairs in the 1940s. His papers include correspondence with fellow members of the Trotskyist movement, and several drafts of essays reflecting on current events, international politics, and American trade and commerce from a leftist perspective.",
@@ -107,18 +119,6 @@
                             {
                                 "role": "dnr",
                                 "value": "Bitkower, Ellen"
-                            }
-                        ]
-                    }
-                ],
-                "physdesc": [
-                    {
-                        "extent": [
-                            {
-                                "value": ".75 Linear Feet"
-                            },
-                            {
-                                "value": "in 1 manuscript box and 1 half manuscript box"
                             }
                         ]
                     }
@@ -236,7 +236,36 @@
                     "publicationstmt": [
                         {
                             "address": [
-                                {}
+                                {
+                                    "addressline": [
+                                        {
+                                            "value": "Elmer Holmes Bobst Library"
+                                        },
+                                        {
+                                            "value": "70 Washington Square South"
+                                        },
+                                        {
+                                            "value": "2nd Floor"
+                                        },
+                                        {
+                                            "value": "New York, NY 10012"
+                                        },
+                                        {
+                                            "value": "special.collections@nyu.edu"
+                                        },
+                                        {
+                                            "extptr": [
+                                                {
+                                                    "href": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
+                                                    "show": "new",
+                                                    "title": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
+                                                    "type": "simple"
+                                                }
+                                            ],
+                                            "value": "URL: "
+                                        }
+                                    ]
+                                }
                             ],
                             "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [

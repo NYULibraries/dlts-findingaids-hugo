@@ -83,6 +83,18 @@
         ],
         "did": [
             {
+                "physdesc": [
+                    {
+                        "extent": [
+                            {
+                                "value": "0.5 Linear Feet"
+                            },
+                            {
+                                "value": "in 1 card box."
+                            }
+                        ]
+                    }
+                ],
                 "abstract": [
                     {
                         "value": "David Havens is a former minister who captured documentary photographs of the Cuban Revolution in 1959. The collection contains 51 black-and-white photographs Havens took during the Cuban Revolution. The photos in the collection were taken during the first week of the revolution between January 4 and Fidel Castro's arrival in Havana on January 8. Photographs include images of pro-Castro demonstrations, revolutionary soldiers entering the city of Havana, and Cuban architecture.",
@@ -102,18 +114,6 @@
                             {
                                 "role": "dnr",
                                 "value": "Havens, David N."
-                            }
-                        ]
-                    }
-                ],
-                "physdesc": [
-                    {
-                        "extent": [
-                            {
-                                "value": "0.5 Linear Feet"
-                            },
-                            {
-                                "value": "in 1 card box."
                             }
                         ]
                     }
@@ -225,7 +225,36 @@
                     "publicationstmt": [
                         {
                             "address": [
-                                {}
+                                {
+                                    "addressline": [
+                                        {
+                                            "value": "Elmer Holmes Bobst Library"
+                                        },
+                                        {
+                                            "value": "70 Washington Square South"
+                                        },
+                                        {
+                                            "value": "2nd Floor"
+                                        },
+                                        {
+                                            "value": "New York, NY 10012"
+                                        },
+                                        {
+                                            "value": "special.collections@nyu.edu"
+                                        },
+                                        {
+                                            "extptr": [
+                                                {
+                                                    "href": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
+                                                    "show": "new",
+                                                    "title": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
+                                                    "type": "simple"
+                                                }
+                                            ],
+                                            "value": "URL: "
+                                        }
+                                    ]
+                                }
                             ],
                             "publisher": "Tamiment Library and Robert F. Wagner Labor Archives",
                             "p": [
