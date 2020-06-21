@@ -1,31 +1,14 @@
 {{/* Diggerfish */}}
 
-{{ $arguments := .current }}
-{{ $recursions := .recursions }}
+{{- $arguments := .current -}}
+{{- $recursions := .recursions -}}
 
-
-
-{{ if not (or (reflect.IsSlice $arguments) (reflect.IsMap $arguments))  }}
-  {{/* It's a string */}}
-  <span class="string" style="display:inline-block; background-color:yellow">{{ $arguments }} </span>
-
-{{ else  if (reflect.IsSlice $arguments) }}
-  {{/* It's a slice */}}
-  {{ $recursions =add .recursions 1 }}
-  <hr style="border-top:5px solid fuchsia" />
-  {{ range $arguments }}
-  <div class="slicenode recursions{{ $recursions }}">
-    {{ partial "diggerfish.html" (dict "current" . "recursions" $recursions )  }}
-  </div>
-  {{- end -}}
-
-{{- else  if (reflect.IsMap $arguments) }}
+{{- if (reflect.IsMap $arguments) -}}
     {{/* $arguments */}}
     {{- $level := "notspecifiedlevel"  -}}
     {{- if  (index $arguments "level")  -}}
       {{- $level = $arguments.level  -}}
-    {{- end -}}
-  
+    {{- end }} 
     <div class="level-{{  $level  }} recursions{{ $recursions }}">
       {{/*  {{ if  (eq $level "file")  }} FILES {{ end }}  */}}
       {{- $aid := index $arguments "id" -}}
