@@ -1,4 +1,5 @@
-{{- $json := resources.Get "fales/mss_421.json" | transform.Unmarshal  -}}
+{{- $pathtojson := ".json" | printf "%s%s"  .Params.identifier | printf "%s%s" "/" | printf "%s%s" .Params.repoidentifier -}}  
+{{- $json := resources.Get $pathtojson | transform.Unmarshal -}}
 {{- $archdesc := index $json "archdesc" -}}
 {{- $eadheader := index $json "eadheader" 0 -}}
 {{- $filedesc := index $eadheader "filedesc" -}}
