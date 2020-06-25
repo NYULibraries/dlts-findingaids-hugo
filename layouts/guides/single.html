@@ -1,5 +1,6 @@
-{{- $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" -}}
-{{- $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 -}}
+{{- $json := resources.Get "fales/mss_421.json" | transform.Unmarshal  -}}
+{{- $archdesc := index $json "archdesc" -}}
+{{- $eadheader := index $json "eadheader" 0 -}}
 {{- $filedesc := index $eadheader "filedesc" -}}
 
 {{- partial "headerguides.html" . }}
