@@ -1,11 +1,12 @@
+{{- $archdesc := .archdesc -}}
 <!DOCTYPE html>
-<html class="" lang="{{ .Site.LanguageCode }}">
+<html class="" lang="{{ .context.Site.LanguageCode }}">
   <head>
     <meta charset="utf-8" />
 
-    {{ partial "meta.html" . }}
-    <title>{{  partial "unittitle.html" .  }}</title>
-    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ partial "meta.html" .context -}}  
+    <title>{{-  partial "unittitle.html" (dict "archdesc" $archdesc )  }}</title>
+    <link rel="canonical" href="{{ .context.Permalink }}" />
  
     {{ partial "head_includes.html" . }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

@@ -1,19 +1,15 @@
 {{- $thisurl := .RelPermalink -}}
+{{- $archdesc := .archdesc -}}  
 <nav id="sidebar">
   <div class="sidebar-header">
       <div class="sidebar-title">Table of Contents</div>
   </div>
-  <ul class="list-unstyled components">
+  <ul class="list-unstyled components outputformats">
     {{ range .OutputFormats -}}
     {{- $pageurl := .RelPermalink -}}
     <li  class="{{- if eq $pageurl $thisurl -}}active{{- end }}"><a class="{{- if eq $pageurl $thisurl -}}active{{- end }}" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
     {{ end -}}
     </ul>
-    {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-  
-    {{ if (reflect.IsSlice ($archdesc )) }}
-        {{ $archdesc = index $archdesc 0 }}
-    {{ end }}
         
     {{ $components :=  index  $archdesc "dsc" 0 "c" }}
     {{ $burl := .Site.BaseURL}}

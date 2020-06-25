@@ -3,13 +3,12 @@
 {{- $eadheader := index $json "eadheader" 0 -}}
 {{- $filedesc := index $eadheader "filedesc" -}}
 
-{{- partial "headerguides.html" . }}
-
+{{- partial "headerguides.html" (dict "context" . "archdesc" $archdesc ) }}
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
-{{ partial "pagebannerguides.html" . }}
+{{ partial "pagebannerguides.html" (dict "context" . "json" $json ) }}
 <div class="wrapper">
  
-  {{ partial "containerlist.html" . }}
+  {{ partial "containerlist.html"  (dict "context" . "archdesc" $archdesc )  }}
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   

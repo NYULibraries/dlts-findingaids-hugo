@@ -1,4 +1,5 @@
-{{- $titleproper := index .Site.Data .Params.repoidentifier .Params.identifier  "eadheader" 0 "filedesc" 0 "titlestmt" 0 "titleproper"  }}
+{{- $titleproper := index .json "eadheader" 0 "filedesc" 0 "titlestmt" 0 "titleproper"  -}}
+
 {{- if (reflect.IsSlice ($titleproper)) }}
       {{- $titleproper = index $titleproper 0 "value" }}
   {{- end }}
