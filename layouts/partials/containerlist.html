@@ -1,20 +1,20 @@
-{{- $thisurl := .RelPermalink -}}
+{{- $thisurl := .context.RelPermalink -}}
 {{- $archdesc := .archdesc -}}  
 <nav id="sidebar">
   <div class="sidebar-header">
       <div class="sidebar-title">Table of Contents</div>
   </div>
   <ul class="list-unstyled components outputformats">
-    {{ range .OutputFormats -}}
+    {{ range .context.OutputFormats -}}
     {{- $pageurl := .RelPermalink -}}
     <li  class="{{- if eq $pageurl $thisurl -}}active{{- end }}"><a class="{{- if eq $pageurl $thisurl -}}active{{- end }}" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
     {{ end -}}
     </ul>
         
     {{ $components :=  index  $archdesc "dsc" 0 "c" }}
-    {{ $burl := .Site.BaseURL}}
-    {{ $pid :=  .Params.identifier }}
-    {{ $rid :=  .Params.repoidentifier }}
+    {{ $burl := .context.Site.BaseURL}}
+    {{ $pid :=  .context.Params.identifier }}
+    {{ $rid :=  .context.Params.repoidentifier }}
   
     <ul class="list-unstyled components">
     {{- range $components}}
