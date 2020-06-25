@@ -20,7 +20,8 @@
     {{- range $components}}
       {{- $cid := index . "id" }}
       {{- $ut := index . "did" 0 "unittitle" 0  "value" }}
-      <li><a href="{{ $burl }}guides/{{ $rid }}/{{ $pid }}/contents.html#{{ $cid }}">{{ $ut | safeHTML  }}</a></li>
+      {{- $pageurl := $cid | printf "%s%s" "/contents.html#" |  printf "%s%s" $pid |  printf "%s%s" "/" |  printf "%s%s" $rid |  printf "%s%s" "guides/" |  printf "%s%s" $burl }}
+      <li><a href="{{ $pageurl }}">{{ $ut | safeHTML  }}</a></li>
     {{ end }}
   </ul>
 </nav>
