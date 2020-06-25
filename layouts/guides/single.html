@@ -1,4 +1,8 @@
-{{ partial "headerguides.html" . }}
+{{- $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" -}}
+{{- $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 -}}
+{{- $filedesc := index $eadheader "filedesc" -}}
+
+{{- partial "headerguides.html" . }}
 
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
 {{ partial "pagebannerguides.html" . }}
@@ -8,9 +12,7 @@
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   
-  {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 }}
-  {{ $filedesc := index $eadheader "filedesc" }}
+
   
   {{- if $archdesc }}
   
