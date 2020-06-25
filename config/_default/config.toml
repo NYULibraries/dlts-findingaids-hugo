@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [outputs]
   home = ["HTML"]
   section = ["HTML"]
-  page = ["overview", "contents" ]
+  page = ["overview" ]
 
 [outputFormats]
   [outputFormats.overview]
