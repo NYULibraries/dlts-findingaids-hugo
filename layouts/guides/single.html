@@ -3,6 +3,7 @@
 {{- $archdesc := index $json "archdesc" -}}
 {{- $eadheader := index $json "eadheader" 0 -}}
 {{- $filedesc := index $eadheader "filedesc" -}}
+{{- $editionstmt := index $filedesc 0 "editionstmt" -}}
 
 {{- partial "headerguides.html" (dict "context" . "archdesc" $archdesc ) }}
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
@@ -50,7 +51,7 @@
       {{- end }}
     {{- end }}
   </div>
-  
+  {{ range $editionstmt -}}{{- partial "fields/editionstmt.html" . -}}{{- end }}
   {{ range $eadheader.profiledesc }}
   <div class="profiledesc">
     <h3 class="formattednote-header">profiledesc</h3>
