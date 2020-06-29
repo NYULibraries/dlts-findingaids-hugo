@@ -1,30 +1,27 @@
-{{- $thisurl := .RelPermalink -}}
+{{- $thisurl := .context.RelPermalink -}}
+{{- $archdesc := .archdesc -}}  
 <nav id="sidebar">
   <div class="sidebar-header">
       <div class="sidebar-title">Table of Contents</div>
   </div>
-  <ul class="list-unstyled components">
-    {{ range .OutputFormats -}}
+  <ul class="list-unstyled components outputformats">
+    {{ range .context.OutputFormats -}}
     {{- $pageurl := .RelPermalink -}}
     <li  class="{{- if eq $pageurl $thisurl -}}active{{- end }}"><a class="{{- if eq $pageurl $thisurl -}}active{{- end }}" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
     {{ end -}}
     </ul>
-    {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-  
-    {{ if (reflect.IsSlice ($archdesc )) }}
-        {{ $archdesc = index $archdesc 0 }}
-    {{ end }}
         
     {{ $components :=  index  $archdesc "dsc" 0 "c" }}
-    {{ $burl := .Site.BaseURL}}
-    {{ $pid :=  .Params.identifier }}
-    {{ $rid :=  .Params.repoidentifier }}
+    {{ $burl := .context.Site.BaseURL}}
+    {{ $pid :=  .context.Params.identifier }}
+    {{ $rid :=  .context.Params.repoidentifier }}
   
     <ul class="list-unstyled components">
     {{- range $components}}
       {{- $cid := index . "id" }}
       {{- $ut := index . "did" 0 "unittitle" 0  "value" }}
-      <li><a href="{{ $burl }}guides/{{ $rid }}/{{ $pid }}/contents.html#{{ $cid }}">{{ $ut | safeHTML  }}</a></li>
+      {{- $pageurl := $cid | printf "%s%s" "/contents.html#" |  printf "%s%s" $pid |  printf "%s%s" "/" |  printf "%s%s" $rid |  printf "%s%s" "guides/" |  printf "%s%s" $burl }}
+      <li><a href="{{ $pageurl }}">{{ $ut | safeHTML  }}</a></li>
     {{ end }}
   </ul>
 </nav>

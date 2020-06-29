@@ -1,16 +1,20 @@
-{{ partial "headerguides.html" . }}
+{{- $pathtojson := ".json" | printf "%s%s"  .Params.identifier | printf "%s%s" "/" | printf "%s%s" .Params.repoidentifier -}}  
+{{- $json := resources.Get $pathtojson | transform.Unmarshal -}}
+{{- $archdesc := index $json "archdesc" -}}
+{{- $eadheader := index $json "eadheader" 0 -}}
+{{- $filedesc := index $eadheader "filedesc" -}}
+{{- $editionstmt := index $filedesc 0 "editionstmt" -}}
 
+{{- partial "headerguides.html" (dict "context" . "archdesc" $archdesc ) }}
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
-{{ partial "pagebannerguides.html" . }}
+{{ partial "pagebannerguides.html" (dict "context" . "json" $json ) }}
 <div class="wrapper">
  
-  {{ partial "containerlist.html" . }}
+  {{ partial "containerlist.html"  (dict "context" . "archdesc" $archdesc )  }}
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   
-  {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 }}
-  {{ $filedesc := index $eadheader "filedesc" }}
+
   
   {{- if $archdesc }}
   
@@ -47,7 +51,7 @@
       {{- end }}
     {{- end }}
   </div>
-  
+  {{ range $editionstmt -}}{{- partial "fields/editionstmt.html" . -}}{{- end }}
   {{ range $eadheader.profiledesc }}
   <div class="profiledesc">
     <h3 class="formattednote-header">profiledesc</h3>
@@ -75,9 +79,7 @@
     <h3 class="formattednote-header">Unit Date</h3>
     {{- $unit_date := "Not Specified or info not located" -}}
     {{- range $did.unitdate }}
-      {{-  $unit_date = .value }}
-    {{- end }}
-    <div>{{ $unit_date }}</div>
+    <div>{{ .value }}{{- if .type -}}, {{ .type -}}{{- end -}}</div>{{- end }}
   </div>
   
   {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "author" )) }}
