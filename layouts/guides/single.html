@@ -79,7 +79,7 @@
     <h3 class="formattednote-header">Unit Date</h3>
     {{- $unit_date := "Not Specified or info not located" -}}
     {{- range $did.unitdate }}
-    <div>{{ .value }}</div>{{- end }}
+    <div>{{ .value }}{{- if .type -}}, {{ .type -}}{{- end -}}</div>{{- end }}
   </div>
   
   {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "author" )) }}
