@@ -84,7 +84,7 @@
   
   {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "author" )) }}
   <div class="author">
-    <h3 class="formattednote-header">Collection processed by</h3>
+    <h3 class="formattednote-header">Collection processed by (in EAD as  titlestmt > author)</h3>
     {{- range $filedesc }}
       {{- range .titlestmt }}
         {{- range .author -}}
@@ -95,7 +95,7 @@
   </div>{{- end -}} 
   {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "sponsor" )) }}
   <div class="sponsor">
-    <h3 class="formattednote-header">Sponsor</h3>
+    <h3 class="formattednote-header">Sponsor (in EAD as titlestmt > author)</h3>
     {{- range $filedesc }}
       {{- range .titlestmt }}
         {{- range .sponsor -}}
