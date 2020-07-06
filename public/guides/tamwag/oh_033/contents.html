@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the New York University Department of History Oral History Class Collection  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,17 +47,18 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_c22b0196a9c060c069c444cafc3149d5">Series I. Lower East Side Oral History Project Interviews</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_c22b0196a9c060c069c444cafc3149d5">Series I. Lower East Side Oral History Project Interviews</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_4cf1d0440f09f4f369e97dcf713de221">Series II. 1995 Oral History Class Interviews</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_4cf1d0440f09f4f369e97dcf713de221">Series II. 1995 Oral History Class Interviews</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_e666c46d2680c102bd74d5289977e6b1">Series III. 1984 Oral History Class Interview</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_e666c46d2680c102bd74d5289977e6b1">Series III. 1984 Oral History Class Interview</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_c0eef9261f918ccb24b65d830f10a873">Series IV. 1999 Oral History Class Interviews</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/oh_033/contents.html#aspace_c0eef9261f918ccb24b65d830f10a873">Series IV. 1999 Oral History Class Interviews</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -6191,4 +6192,8 @@ Cassette 2 Format: Audiocassette, Duration: 00:20:00, Sound </p>
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

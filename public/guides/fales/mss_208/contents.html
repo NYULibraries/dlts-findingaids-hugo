@@ -33,7 +33,7 @@
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the Sylvester Manor Archive 1649-1996 
            </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -48,23 +48,24 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref10">Record Group I: Sylvester, Brinley, and Lloyd Families</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref10">Record Group I: Sylvester, Brinley, and Lloyd Families</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref121">Record Group II: L'Hommedieu Family</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref121">Record Group II: L'Hommedieu Family</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref1792">Record Group III: Gardiner Family</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref1792">Record Group III: Gardiner Family</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref1800">Record Group IV: Horsford Family</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref1800">Record Group IV: Horsford Family</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4134">Record Group V: Fiske Family</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4134">Record Group V: Fiske Family</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4136">Record Group VI: Photographic Material</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4136">Record Group VI: Photographic Material</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4143">Record Group VII: Artifacts</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_208/contents.html#aspace_ref4143">Record Group VII: Artifacts</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -103464,4 +103465,8 @@
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

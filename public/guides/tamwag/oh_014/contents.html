@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the New York City Immigrant Labor History Project Oral History Collection  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,11 +47,12 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/tamwag/oh_014/contents.html#aspace_ref408">New York City Immigrant Labor History Project</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/oh_014/contents.html#aspace_ref408">New York City Immigrant Labor History Project</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -7620,4 +7621,8 @@ Hersh Rabinowitz:  </p><p> Hersh Rabinowitz discusses leaving Palestine because 
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

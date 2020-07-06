@@ -151,7 +151,8 @@ a:focus {
 }
 
 #sidebar ul li.active>a,
-a[aria-expanded="true"] {
+a[aria-expanded="true"],
+.scrollactive-item.is-active {
     color: #fff;
     /* background: #6d7fcc; */
     padding-left: 8px;

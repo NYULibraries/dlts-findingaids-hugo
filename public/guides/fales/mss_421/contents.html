@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the Richard Berkowitz Papers  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,27 +47,28 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_671c91d90d22a19e990d80bc3ab75ddd">Series I. Correspondence</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_671c91d90d22a19e990d80bc3ab75ddd">Series I. Correspondence</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_89b3c008153a7b8b305692bdcb5242ef">Series II. Education</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_89b3c008153a7b8b305692bdcb5242ef">Series II. Education</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_2761ae17eeb00c7da8e297c25cbd06a3">Series III. Family Records</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_2761ae17eeb00c7da8e297c25cbd06a3">Series III. Family Records</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_0cc013270d6a01dfd8786d5069a53afc">Series IV. Financial Records</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_0cc013270d6a01dfd8786d5069a53afc">Series IV. Financial Records</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_958517ac1891868ccb93a25c5b560cd1">Series V. Medical Records</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_958517ac1891868ccb93a25c5b560cd1">Series V. Medical Records</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_44a16e9562ee90cc8ce01255e90cfedf">Series VI. <span class="ead-emph ead-emph-italic">Sex Positive</span></a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_44a16e9562ee90cc8ce01255e90cfedf">Series VI. <span class="ead-emph ead-emph-italic">Sex Positive</span></a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_ec2262df17f147558f70d0b5036ab5e2">Series VII. Sex Work</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_ec2262df17f147558f70d0b5036ab5e2">Series VII. Sex Work</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_109b431ac0be399bd3dfedfc792f1823">Series VIII. Work Files</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_109b431ac0be399bd3dfedfc792f1823">Series VIII. Work Files</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_eeae9a5b3a43c863721a31ae456b535b">Archived website</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/fales/mss_421/contents.html#aspace_eeae9a5b3a43c863721a31ae456b535b">Archived website</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -2797,4 +2798,8 @@ Michael Callen "We Know Who We Are" and <span class="ead-emph ead-emph-italic">H
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

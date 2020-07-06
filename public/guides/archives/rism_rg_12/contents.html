@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the Records of the Research Institute for the Study of Man's (RISM) Study of Chronic Marihuana Users in Jamaica (The Ganja Study)  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,19 +47,20 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref174">Series II: Subject Files</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref174">Series II: Subject Files</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref285">Series III: Reports</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref285">Series III: Reports</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref289">Series IV: Journals, Articles, and Reprints</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref289">Series IV: Journals, Articles, and Reprints</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref413">Series V: Newspapers and Clippings</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref413">Series V: Newspapers and Clippings</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref439">Appendix</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rism_rg_12/contents.html#aspace_ref439">Appendix</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -3879,4 +3880,8 @@
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

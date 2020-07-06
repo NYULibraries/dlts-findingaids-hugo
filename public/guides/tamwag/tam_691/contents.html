@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the David Havens Photographs on the Cuban Revolution  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,9 +47,10 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -88,4 +89,8 @@
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

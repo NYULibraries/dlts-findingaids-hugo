@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the Records of the Institute of African American Affairs  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,19 +47,20 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref20">Series I: Events Files</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref20">Series I: Events Files</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref684">Series II: Association for Education in Journalism (AEJ)</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref684">Series II: Association for Education in Journalism (AEJ)</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref1633">Series III: Earl S. Davis Correspondence</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref1633">Series III: Earl S. Davis Correspondence</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref3702">Series IV: Audiovisual Recordings</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_ref3702">Series IV: Audiovisual Recordings</a></li>
     
-      <li><a href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_1af9b9b7e05733cef844219c8c522c23">Series V: Administrative Files</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/archives/rg_9_8/contents.html#aspace_1af9b9b7e05733cef844219c8c522c23">Series V: Administrative Files</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -25128,4 +25129,8 @@
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 

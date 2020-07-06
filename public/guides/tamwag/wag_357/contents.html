@@ -32,7 +32,7 @@
   <a class="back-link" href="http://localhost/findingaids/" >&lt;&lt;&lt; Back to list</a> 
  <h1><a href="http://localhost/findingaids/" class="site-title">Guide to the Noah Karvelis Papers on Arizona Teachers Organizing  </a> </h1>
 </header>
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   <nav id="sidebar">
   <div class="sidebar-header">
@@ -47,11 +47,12 @@
     
     
     
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
-      <li><a href="http://localhost/findingaids/guides/tamwag/wag_357/contents.html#aspace_cc173aff09bce2cd701431ac90e48ad5">PDF Files</a></li>
+      <li><a class="scrollactive-item" href="http://localhost/findingaids/guides/tamwag/wag_357/contents.html#aspace_cc173aff09bce2cd701431ac90e48ad5">PDF Files</a></li>
     
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>
   <main id="content">
  
@@ -104,4 +105,8 @@
         });
     });
 </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/findingaids/js/main.js"></script>
 
