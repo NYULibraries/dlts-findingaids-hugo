@@ -12,6 +12,8 @@
     });
 </script>
 
-{{ $opts := dict "noComments" true }}
-{{- $transpiled := resources.Get "js/main.js" | babel $opts -}}
-<script src="{{ $transpiled.Permalink | relURL }}"></script>
+{{/* $opts := dict "noComments" true "config" "babel.config.json" */}}
+{{/* $transpiled := resources.Get "js/main.js" | babel $opts -*/}}
+{{- $min := resources.Get "js/main.js" -}}
+<script src="https://unpkg.com/vue"></script>
+<script src="{{ $min | relURL }}"></script>

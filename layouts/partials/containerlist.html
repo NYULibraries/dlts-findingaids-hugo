@@ -15,13 +15,14 @@
     {{ $burl := .context.Site.BaseURL}}
     {{ $pid :=  .context.Params.identifier }}
     {{ $rid :=  .context.Params.repoidentifier }}
-  
+    <scrollactive class="my-nav" :offset="220">
     <ul class="list-unstyled components">
     {{- range $components}}
       {{- $cid := index . "id" }}
       {{- $ut := index . "did" 0 "unittitle" 0  "value" }}
       {{- $pageurl := $cid | printf "%s%s" "/contents.html#" |  printf "%s%s" $pid |  printf "%s%s" "/" |  printf "%s%s" $rid |  printf "%s%s" "guides/" |  printf "%s%s" $burl }}
-      <li><a href="{{ $pageurl }}">{{ $ut | safeHTML  }}</a></li>
+      <li><a class="scrollactive-item" href="{{ $pageurl }}">{{ $ut | safeHTML  }}</a></li>
     {{ end }}
-  </ul>
+    </ul>
+    </scrollactive>
 </nav>

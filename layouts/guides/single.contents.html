@@ -7,7 +7,7 @@
 
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
   {{ partial "pagebannerguides.html" (dict "context" . "json" $json ) }}
-<div class="wrapper">
+<div class="wrapper" id ="app">
  
   {{ partial "containerlist.html"  (dict "context" . "archdesc" $archdesc )  }}
   <main id="content">
