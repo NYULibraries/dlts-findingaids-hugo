@@ -1,16 +1,20 @@
-{{ partial "headerguides.html" . }}
+{{- $pathtojson := ".json" | printf "%s%s"  .Params.identifier | printf "%s%s" "/" | printf "%s%s" .Params.repoidentifier -}}  
+{{- $json := resources.Get $pathtojson | transform.Unmarshal -}}
+{{- $archdesc := index $json "archdesc" -}}
+{{- $eadheader := index $json "eadheader" 0 -}}
+{{- $filedesc := index $eadheader "filedesc" -}}
+{{- $editionstmt := index $filedesc 0 "editionstmt" -}}
 
+{{- partial "headerguides.html" (dict "context" . "archdesc" $archdesc ) }}
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
-{{ partial "pagebannerguides.html" . }}
+{{ partial "pagebannerguides.html" (dict "context" . "json" $json ) }}
 <div class="wrapper">
  
-  {{ partial "containerlist.html" . }}
+  {{ partial "containerlist.html"  (dict "context" . "archdesc" $archdesc )  }}
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   
-  {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-  {{ $eadheader := index .Site.Data .Params.repoidentifier .Params.identifier "eadheader" 0 }}
-  {{ $filedesc := index $eadheader "filedesc" }}
+
   
   {{- if $archdesc }}
   
@@ -28,27 +32,102 @@
 
   <div class="publisher">
   
-    <h3 class="formattednote-header">Publisher</h3>
-    {{ $publisher := "Not Specified or info not located" }}
+    <h3 class="formattednote-header">Publication Statement</h3>
     {{ range $filedesc }}
       {{ range .publicationstmt }}
-        {{ range .publisher }}
-          {{  $publisher = . }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    <div>{{ $publisher }}</div>
+        {{- if .publisher }}
+          <div class="publicationstmt-publisher">Publisher: {{  .publisher }}</div>
+        {{- end }}
+        {{- range .address }}
+          <div class="publicationstmt-address">
+          {{- range .addressline }}
+            <div class="publicationstmt-addressline">{{- htmlUnescape .value | safeHTML -}}  
+              {{- range .extptr -}}<a class="publicationstmt-extptr" href="{{ .href }}"> {{ .title }} </a>{{- end -}}</div>
+          {{- end }}
+        </div>{{- end }}
+        {{- range .p }}
+          <div  class="publicationstmt-p">{{- htmlUnescape .value | safeHTML -}}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  </div>
+  {{ range $editionstmt -}}{{- partial "fields/editionstmt.html" . -}}{{- end }}
+  {{ range $eadheader.profiledesc }}
+  <div class="profiledesc">
+    <h3 class="formattednote-header">profiledesc</h3>
+      {{- range .creation -}}
+      <div class="creation">{{ .value  }} <span class="date">{{ .date  }}</span></div>
+      {{- end }}
+      {{ range .descrules -}}
+      <div class="descrules">Using <i>{{ .}}</i></div>
+      {{- end }}
+      {{ range .langusage -}}
+      <div class="langusage">Language: {{ .value }}</div>
+      {{- end }} 
+  </div>{{- end }}
+  
+  <div class="unit_id">
+    <h3 class="formattednote-header">Unit ID</h3>
+    {{- $unit_id := "Not Specified or info not located" -}}
+    {{- range $did.unitid }}
+      {{-  $unit_id = .value }}
+    {{- end }}
+    <div>{{ $unit_id }}</div>
   </div>
   
-  {{ $r := index $did "repository"  }}
+  <div class="unit_date">
+    <h3 class="formattednote-header">Unit Date</h3>
+    {{- $unit_date := "Not Specified or info not located" -}}
+    {{- range $did.unitdate }}
+    <div>{{ .value }}{{- if .type -}}, {{ .type -}}{{- end -}}</div>{{- end }}
+  </div>
+  
+  {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "author" )) }}
+  <div class="author">
+    <h3 class="formattednote-header">Collection processed by (in EAD as  titlestmt > author)</h3>
+    {{- range $filedesc }}
+      {{- range .titlestmt }}
+        {{- range .author -}}
+        <div>{{ . }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }} 
+  </div>{{- end -}} 
+  {{ if (reflect.IsSlice (index $filedesc 0 "titlestmt" 0 "sponsor" )) }}
+  <div class="sponsor">
+    <h3 class="formattednote-header">Sponsor (in EAD as titlestmt > author)</h3>
+    {{- range $filedesc }}
+      {{- range .titlestmt }}
+        {{- range .sponsor -}}
+        <div>{{ . }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }} 
+  </div>{{- end -}} 
+  
+  {{- $or := index $did "origination"  }}
+  <div class="origination">
+  {{ range $or }}
+    <h3 class="formattednote-header">{{ .label }}</h3>
+    {{- range .corpname -}}<span class="corpname">{{ .value }} {{- if .role -}} <span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end -}}
+    {{- range .persname -}}<span  class="persname">{{ .value }} {{- if .role -}} <span class="persname-role">Role: {{- .role -}}</span>{{ end -}}</span>{{- end }}
+  {{ end }}</div>
+  
+  {{- $r := index $did "repository"  }}
   {{ range $r }}<div class="repository">
-    <h3 class="formattednote-header">repository</h3>
-    {{ range .corpname }}{{ . }}{{ end }}
+    <h3 class="formattednote-header">Repository</h3>
+    {{- range .corpname -}}<span class="corpname">{{ .value }}</span>{{- if .role -}} <span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- end -}}
   </div>{{ end }}
  
   <div class="physdesc"><h3 class="label formattednote-header">Extent</h3>
   {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value | safeHTML }}</span> {{ end -}}<br>{{- end -}}
   </div>
+ 
+  {{ if ($did.physloc) -}}{{- range $did.physloc -}}
+  <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
+    {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
+   </div>   
+ {{- end -}}{{- end -}}
  
   {{ range $did.abstract }}
     <div class="abstract "><h3 class="label formattednote-header">Abstract</h3>
@@ -59,36 +138,17 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
   
-  {{- range $archdesc.bibliography -}}
-  <div class="bibliography" id="{{- .id }}"><h3 class="label formattednote-header">{{- index .head 0 "value"}}</h3>
-    {{- range .bibref -}}{{ .value | safeHTML  -}}<br>{{- end -}}
-    </div>
-    {{- end -}}
+  {{ range $archdesc.bibliography }}
+    {{ partial "fields/bibliography.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
+  {{- end -}} 
     
   {{ range $archdesc.bioghist }}
     {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
   {{- end -}}
 
   {{ range $archdesc.controlaccess }}
-  <div class="controlaccess" >
-  <h3 class="label formattednote-header">Controlaccess</h3>
-    {{ range $i, $e :=  .corpname }}
-      {{- if $i -}}, {{ else }} <h4>corpname</h4> {{ end -}}
-      {{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .genreform }}
-      {{- if $i -}}, {{ else }} <h4>genreform</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .persname }}
-      {{- if $i -}}, {{ else }} <h4>persname</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-    {{ range $i, $e :=  .subject }}
-    {{- if $i -}}, {{ else }} <h4>subject</h4> {{ end -}}{{- . }} 
-    {{- end -}}
-  </div>    
+  {{ partial "controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" 2 ) -}}   
   {{- end -}}
-
-
   
   {{ range $archdesc.scopecontent }}
     {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
@@ -146,9 +206,14 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
   
-  <!-- {{ range $archdesc.bibliography }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "bibliography" "recursions" 2) -}}
-  {{- end -}} -->
+  {{ range $eadheader.revisiondesc }}
+  <div class="formattednote revisiondesc" >
+      <h3>revisiondesc</h3>
+      {{- range .change }}
+      <div class="revisiondesc-change">{{range .date }}<span>{{ . }}:</span> {{- end }} {{range .item -}}{{ .value }} {{- end -}}</div>
+      {{- end -}}
+  </div>
+  {{- end }}
   
   {{- else -}}
     

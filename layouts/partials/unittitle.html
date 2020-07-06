@@ -1,8 +1,4 @@
-{{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-
-{{ if (reflect.IsSlice ($archdesc )) }}
-{{ $archdesc = index $archdesc 0 }}
-{{ end }}
+{{- $archdesc := .archdesc -}}
 
 {{- $did := index $archdesc "did" }}
 {{ if (reflect.IsSlice ($did )) }}

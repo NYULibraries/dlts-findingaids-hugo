@@ -1,0 +1,92 @@
+{{/* controlaccess */}}
+
+{{- $current := .current -}}
+{{- $classname := .classname -}}
+{{- $h := add .recursions 1 -}}
+{{- $hnext := add .recursions 2 -}}
+
+
+
+<div class="{{ $classname }}" >
+  <h{{- $h  }}  class="label formattednote-header">Controlaccess</h{{- $h  }}>
+  
+  {{ if .current.corpname -}}
+    {{ $lastindex := sub (len .current.corpname) 1 -}}
+    <h{{- $hnext  }}>corpname</h{{- $hnext  }}>
+    <div>
+      {{ range $i, $e :=  .current.corpname -}}
+      <span class="corpname-value">{{- .value -}}</span> {{- if .role -}}<span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
+      {{- end }}
+    </div>
+  {{- end }}
+  {{- if .current.famname -}}
+  {{ $lastindex := sub (len .current.famname) 1 -}}
+  <h{{- $hnext  }}>famname</h{{- $hnext  }}>
+  <div>
+    {{ range $i, $e :=  .current.famname -}}
+    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end }}
+  </div>  
+  {{- end -}}
+  {{- if .current.function -}}
+  {{ $lastindex := sub (len .current.function) 1 -}} 
+  <h{{- $hnext  }}>function</h{{- $hnext  }}>
+  <div>
+    {{- range $i, $e :=  .current.function -}}
+    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end }}
+  </div>  
+  {{- end }}
+  
+  {{ if .current.genreform -}}
+    {{ $lastindex := sub (len .current.genreform) 1 -}}
+    <h{{- $hnext  }}>genreform</h{{- $hnext  }}>
+    <div>
+      {{ range $i, $e :=  .current.genreform -}}
+      <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+      {{- end }}
+    </div>
+  {{- end -}}
+  
+  {{- if .current.persname }}
+  {{- $lastindex := sub (len .current.persname) 1 -}}
+  <h{{- $hnext  }}>persname</h{{- $hnext  }}>
+    <div>
+      {{- range $i, $e :=  .current.persname -}}
+        <span class="persname-value">{{- .value -}}</span> {{- if .role -}}<span class="persname-role">Role: {{- .role -}}</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
+      {{- end }}
+    </div>
+  {{- end -}}
+
+  
+  {{- if .current.subject }}
+    {{- $lastindex := sub (len .current.subject) 1 -}}
+    <h{{- $hnext  }}>subject</h{{- $hnext  }}>
+    <div>
+    {{ range $i, $e :=  .current.subject -}}
+    <span>{{- . -}}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end }}
+    </div>
+  {{- end }}
+  
+  {{ if .current.geogname }}
+    {{- $lastindex := sub (len .current.geogname) 1 -}}
+    <h{{- $hnext  }}>geogname</h{{- $hnext  }}>
+    <div>
+    {{ range $i, $e :=  .current.geogname -}}
+      <span>{{- . }}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+    {{- end -}}
+    </div>
+  {{- end }}
+  
+  {{ if .current.occupation }}
+  {{- $lastindex := sub (len .current.occupation) 1 -}}
+  <h{{- $hnext  }}>occupation</h{{- $hnext  }}>
+  <div>
+  {{ range $i, $e :=  .current.occupation -}}
+    <span>{{- . }}</span>{{- if ne $i $lastindex -}}; {{ end -}}
+  {{- end -}}
+  </div>
+  {{- end }}  
+  
+ </div>    

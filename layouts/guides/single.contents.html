@@ -1,22 +1,21 @@
-{{ partial "headerguides.html" . }}
+{{- $pathtojson := ".json" | printf "%s%s"  .Params.identifier | printf "%s%s" "/" | printf "%s%s" .Params.repoidentifier -}}  
+{{- $json := resources.Get $pathtojson | transform.Unmarshal -}}
+{{- $archdesc := index $json "archdesc" -}}
+{{- $dsc := index $archdesc "dsc" -}}
+
+{{- partial "headerguides.html" (dict "context" . "archdesc" $archdesc ) }}
 
 <body lang="{{ .Site.LanguageCode }}" class="body-dsc">
-{{ partial "pagebannerguides.html" . }}
+  {{ partial "pagebannerguides.html" (dict "context" . "json" $json ) }}
 <div class="wrapper">
  
-  {{ partial "containerlist.html" . }}
+  {{ partial "containerlist.html"  (dict "context" . "archdesc" $archdesc )  }}
   <main id="content">
  
     {{ partial "menu-toggle-button.html" . }}
-    
-    {{ $archdesc := index .Site.Data .Params.repoidentifier .Params.identifier "archdesc" }}
-    {{ if (reflect.IsSlice ($archdesc )) }}
-        {{ $archdesc = index $archdesc 0 }}
-    {{ end }}
-    {{ $dsc := index $archdesc "dsc" }}
-          
+      
     {{- if $dsc -}}
-      <h1 class="page-title">{{  partial "unittitle.html" .  }}</h1>  
+      <h1 class="page-title">{{ partial "unittitle.html"  (dict "archdesc" $archdesc )  }}</h1>  
       <h2>Contents</h2>
       {{/* Loop over the structure */}}
        {{ $components := index $dsc 0 "c" }}
