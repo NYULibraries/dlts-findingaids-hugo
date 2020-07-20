@@ -1,0 +1,18 @@
+{{/* .langmaterial */}}
+
+{{- $current := .current -}}
+{{- $classname := .classname -}}
+{{- $h := add .recursions 1 -}}
+
+  <div class="langmaterial"{{ if .current.id }} id ="{{ .current.id }}"{{- end -}}>
+        <h{{- $h  }} class="formattednote-header">langmaterial:</h{{- $h  -}}>
+        {{/*  One model for langmaterial  */}}
+          {{- if .current.language -}}<span class= "langmaterial1">
+        {{- $lastindex := sub (len .current.language) 1 -}}
+        {{- range $x, $y :=  .current.language -}}{{- $y.value -}}{{- if ne $x $lastindex -}}, {{- end -}}{{- end -}}</span>
+      {{- else if .current.value -}}
+      {{/*  Different model for langmaterial  */}}
+        <span class= "langmaterial2">{{ .current.value }}</span>
+      {{- end -}}
+  
+  </div>

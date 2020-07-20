@@ -35,21 +35,8 @@
       {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div> 
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end -}}
-      {{- if $langmaterial }}
-        <div class="langmaterial">
-        <div class="label  formattednote-header">langmaterial:</div>
-          {{- range $i, $e :=  $langmaterial -}}
-            {{/*  One model for langmaterial  */}}
-            {{- if $e.language -}}
-              <span class= "langmaterial1" >
-              {{- $lastindex := sub (len $e.language) 1 -}}
-              {{- range $x, $y :=  $e.language -}}{{- $y.value -}}{{- if ne $x $lastindex -}}, {{- end -}}{{- end -}}</span>
-            {{- else if $e.value -}}
-            {{/*  Different model for langmaterial  */}}
-              <span class= "langmaterial2" id ="{{ $e.id }}">{{ $e.value }}</span>
-            {{- end -}}
-          {{- end -}}
-        </div>
+      {{- range $langmaterial }}
+        {{ partial "fields/langmaterial.html" (dict "current" . "classname" "langmaterial" "recursions" $recursions) -}}
       {{- end -}}
       {{- if ($physdesc) }}
       <div class="physdesc "><h3 class="label formattednote-header">Extent</h3> 

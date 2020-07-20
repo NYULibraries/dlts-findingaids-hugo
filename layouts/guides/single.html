@@ -75,6 +75,9 @@
     <div>{{ $unit_id }}</div>
   </div>
   
+  {{ range $did.langmaterial }}
+    {{ partial "fields/langmaterial.html" (dict "current" . "classname" "langmaterial" "recursions" 2) -}}
+  {{- end }}
   <div class="unit_date">
     <h3 class="formattednote-header">Unit Date</h3>
     {{- $unit_date := "Not Specified or info not located" -}}
