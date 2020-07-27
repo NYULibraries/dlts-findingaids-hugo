@@ -376,3 +376,12 @@ main#content {
   
     margin-top: 12px;
 }
+
+.ead-lb {
+   display: inline-block;
+   min-width: 3rem;
+   padding: 0 1rem;
+}
+.ead-lb::after {
+    content:"–"
+}
