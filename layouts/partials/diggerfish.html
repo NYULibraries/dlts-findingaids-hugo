@@ -100,10 +100,9 @@
     {{ range $arguments.phystech }}
       {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
     {{- end -}}
-    {{- if $container -}}
-      {{- partial "fields/container.html" (dict "current" $container "classname" "container" "recursions" $recursions) -}}
+    {{- with $container -}}
+      {{- partial "fields/container.html" . -}}
     {{- end -}}
-
     {{- /*   */ -}}
     {{- if not (ge $recursions 9 )  }}
       {{ if  ($arguments.c)  }} 
