@@ -22,6 +22,7 @@
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
       {{- $unitid := index $arguments "did" 0 "unitid"  -}}  
       {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
+      {{- $container := index $arguments "did" 0 "container"  -}}
       {{- $recursions := add $recursions 1 -}}
       {{- if (reflect.IsMap ($unittitle)) -}}
         {{- $unittitle = $unittitle.value -}}
@@ -99,10 +100,12 @@
     {{ range $arguments.phystech }}
       {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
     {{- end -}}
+    {{- if $container -}}
+      {{- partial "fields/container.html" (dict "current" $container "classname" "container" "recursions" $recursions) -}}
+    {{- end -}}
 
-
-    {{/*   */}}
-    {{ if not (ge $recursions 9 )  }}
+    {{- /*   */ -}}
+    {{- if not (ge $recursions 9 )  }}
       {{ if  ($arguments.c)  }} 
       {{/*  {{ $recursions =add .recursions 1 }}  */}}
         {{ range $arguments.c }}
