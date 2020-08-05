@@ -101,7 +101,7 @@
       {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
     {{- end -}}
     {{- with $container -}}
-      {{- partial "fields/container.html" . -}}
+      {{- partial "fields/container.html" (dict "current" . "unittitle" $unittitle) -}} 
     {{- end -}}
     {{- /*   */ -}}
     {{- if not (ge $recursions 9 )  }}
