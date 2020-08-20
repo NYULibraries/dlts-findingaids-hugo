@@ -1,30 +1,23 @@
 {{/* Container */}}
-
-{{- $unittitle := .unittitle -}}  
-<div class="ead-container" >
-  
- 
-
-    {{- $parentid1 := "0" -}}
-    {{- $parentid2 := "0" -}}
-    {{- range .current }}
-     
-      {{- if not .parent }}
-       <!-- if it doesn't have parent property, then it is the parent --> <div class="ead-container-parent" id = "{{ .id }}">
-        {{- .type | safeHTML  }} {{ .value | safeHTML  }} {{- with .label }} ({{ . | safeHTML  -}} ){{- end -}}
-        {{- $parentid1 = .id -}}
-      </div>
-      {{- else -}}
-       <!-- It is a child? -->
-        {{- if eq  $parentid1 .parent }} 
-          {{- $parentid2 = .id -}}
-          <div id = "{{ .id }}" class="ead-container-child" >
-          {{- .type | safeHTML  }} {{ .value | safeHTML  }} {{- with .label }} Label: ({{ . | safeHTML  -}} ) {{- end }}</div>
-        {{- else -}}
-          <div id = "{{ .id }}" class="ead-container-child oddball" >
-          {{- .type | safeHTML  }} {{ .value | safeHTML  }} {{- with .label }} Label: ({{ . | safeHTML  -}} ) {{- end -}}
-          {{- warnf "Failed to match %q"  .type | safeHTML  }}  </div>
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
+<div class="ead-container-wrapper" >
+  {{- $parentid1 := "0" -}}
+  {{- $parentid2 := "0" -}}
+  {{- range .current }}
+    {{- if not .parent }}
+    <br class="ead-container">
+          {{/* if it doesn't have parent property, then it is the parent */}}
+          {{- with .label -}}
+          <div class="ead-material-type"><span class="label  formattednote-header">Material Type: </span>{{ . | safeHTML  -}}</div>
+          {{- end }}
+          <span class="label  formattednote-header">Container: </span>
+          <span id = "{{ .id }}" class="ead-container-parent">{{- .type | safeHTML  }} {{ .value | safeHTML  -}}</span>
+          {{- $parentid1 = .id -}}
+    {{- else if eq  $parentid1 .parent  -}}  {{/* It is a child? */}}
+          {{- $parentid2 = .id -}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
+    {{- else if eq  $parentid2 .parent -}}
+          {{/*  It is a grandchild?  */}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
+    {{- else -}}
+          {{- errorf "Container.html. There is some mismatched data here. "  }} 
+    {{- end }} 
+  {{- end }}
 </div>
