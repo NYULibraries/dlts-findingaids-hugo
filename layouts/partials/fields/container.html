@@ -2,22 +2,37 @@
 <div class="ead-container-wrapper" >
   {{- $parentid1 := "0" -}}
   {{- $parentid2 := "0" -}}
+  {{- $materialtype := "" -}}
+  {{- $testA := slice  -}}
+  {{ $scratch := newScratch }}
+  {{ .site.Scratch.Set "greetings" "Good Morning" }}
+  {{- $isfirst := "true" -}}
+  
+  
   {{- range .current }}
     {{- if not .parent }}
-    <br class="ead-container">
+      {{- if (eq $isfirst "true") }}
+        <div class="ead-container ead-container-first">
+        {{- $isfirst = "false"   -}}
+      {{ else }}
+        </div>
+        <div class="ead-container">
+      {{ end }}
           {{/* if it doesn't have parent property, then it is the parent */}}
-          {{- with .label -}}
-          <div class="ead-material-type"><span class="label  formattednote-header">Material Type: </span>{{ . | safeHTML  -}}</div>
-          {{- end }}
-          <span class="label  formattednote-header">Container: </span>
-          <span id = "{{ .id }}" class="ead-container-parent">{{- .type | safeHTML  }} {{ .value | safeHTML  -}}</span>
+          <span class="label  formattednote-header">{{- .type | safeHTML  }}: </span>
+          <span id = "{{ .id }}" class="ead-container-parent">{{ .value | safeHTML  -}}</span>
+          {{ with .label -}}{{ $materialtype =  . }}{{- end }}
+       
           {{- $parentid1 = .id -}}
     {{- else if eq  $parentid1 .parent  -}}  {{/* It is a child? */}}
           {{- $parentid2 = .id -}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
+     
     {{- else if eq  $parentid2 .parent -}}
           {{/*  It is a grandchild?  */}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
     {{- else -}}
           {{- errorf "Container.html. There is some mismatched data here. "  }} 
     {{- end }} 
-  {{- end }}
+    {{ with $materialtype -}}<span class="ead-material-type">Material Type: {{ $materialtype  | safeHTML  -}}</span>{{ end }}
+  {{- end }}</div>
 </div>
+
