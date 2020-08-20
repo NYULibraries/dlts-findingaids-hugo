@@ -23,6 +23,7 @@
   {{ $did = index $did 0 }}
   {{ end }}
 
+  {{- $container := index $did "container" -}}
   {{- $unittitle := index $did "unittitle" 0}}
   {{- if (reflect.IsMap ($unittitle)) }}
       {{- $unittitle = $unittitle.value }}
@@ -205,6 +206,9 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
   {{- end -}}
   
+  {{ with $container }}
+    {{- partial "fields/container.html" (dict "current" . ) -}} 
+  {{- end -}}
   {{ range $archdesc.odd }}
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
