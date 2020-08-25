@@ -1,38 +1,71 @@
 {{/* Container */}}
+{{ $scratch := newScratch -}}
+
 <div class="ead-container-wrapper" >
   {{- $parentid1 := "0" -}}
   {{- $parentid2 := "0" -}}
   {{- $materialtype := "" -}}
-  {{- $testA := slice  -}}
-  {{ $scratch := newScratch }}
-  {{ .site.Scratch.Set "greetings" "Good Morning" }}
-  {{- $isfirst := "true" -}}
-  
-  
-  {{- range .current }}
-    {{- if not .parent }}
-      {{- if (eq $isfirst "true") }}
-        <div class="ead-container ead-container-first">
-        {{- $isfirst = "false"   -}}
-      {{ else }}
-        </div>
-        <div class="ead-container">
-      {{ end }}
-          {{/* if it doesn't have parent property, then it is the parent */}}
-          <span class="label  formattednote-header">{{- .type | safeHTML  }}: </span>
-          <span id = "{{ .id }}" class="ead-container-parent">{{ .value | safeHTML  -}}</span>
-          {{ with .label -}}{{ $materialtype =  . }}{{- end }}
+  {{- $arrayofallcontainers := slice   -}}
+  {{- $newcontainerarray := slice    -}}
+  {{- $i := 0    -}}
+  {{- range .current -}}
+    {{- if not .parent -}}
+      {{- $i = add $i 1 -}}
+      {{/* if it doesn't have parent property, then it is the parent */}}
+ 
+      {{/* If this is not the first box-level container   */}}
+      {{- if (gt (len $newcontainerarray) 0) -}}
+        
+         
+        {{/* Move first item in array to end of array (material type)  */}}
+        {{- $newcontainerarray = $newcontainerarray  | append (index $newcontainerarray 0)  -}}
+        {{- $newcontainerarray =  after 1 $newcontainerarray  -}}
+        {{/* Store that previous container info in the scratch variable  */}}
+        {{ $scratch.SetInMap "scratchofcontainers" (string $i) $newcontainerarray }}
+      
+        {{/*
+        {{ $allContainers := $scratch.Get "scratchofcontainers"   }} 
+        {{ range $allContainers }} index {{ $i }} {{ range . -}}{{- . | safeHTML  }} {{ end   -}} <br ><hr> {{ end  }} 
+        */}}
+        
+        {{/* Reset the array, but don't initialize, because of scoping issues  */}}
+        {{- $newcontainerarray = slice    -}}
+      {{ end -}}
        
-          {{- $parentid1 = .id -}}
-    {{- else if eq  $parentid1 .parent  -}}  {{/* It is a child? */}}
-          {{- $parentid2 = .id -}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
+      {{/* First add "label" to the array - we'll move it to the end later */}}
+      {{- $newcontainerarray = $newcontainerarray  | append .label  -}}
+      {{/* Add "type" and "value" to the array  */}}
+      {{- $typeandvalue := .value  | printf "<span  class=\"ead-container-parent\">%s: %s</span>" .type | printf "%s"  -}}  
+      {{- $newcontainerarray = $newcontainerarray  | append $typeandvalue  -}}
+      {{- $parentid1 = .id -}}
      
-    {{- else if eq  $parentid2 .parent -}}
-          {{/*  It is a grandchild?  */}}, <span {{ with .id -}}id = "{{ . }}"{{- end }} class="ead-container-child-child">{{- .type | safeHTML  }} {{ .value | safeHTML  }}</span>
-    {{- else -}}
-          {{- errorf "Container.html. There is some mismatched data here. "  }} 
-    {{- end }} 
-    {{ with $materialtype -}}<span class="ead-material-type">Material Type: {{ $materialtype  | safeHTML  -}}</span>{{ end }}
-  {{- end }}</div>
+    {{- else if eq  $parentid1 .parent  -}}  {{/* It is a child? */}}
+      {{- $parentid2 = .id -}}
+      {{- $typeandvalueb := .value  | printf "%s: %s" .type | printf "%s"  -}}  
+      {{- $newcontainerarray = $newcontainerarray  | append $typeandvalueb  -}}
+    {{- else if eq  $parentid2 .parent -}} {{/*  It is a grandchild?  */}}
+      {{- $typeandvaluec := .value  | printf "%s: %s" .type | printf "%s"  -}}  
+      {{- $newcontainerarray = $newcontainerarray  | append $typeandvaluec  -}}
+      grandchild!: {{ delimit $newcontainerarray ", " }}
+    {{else}}
+      {{- errorf "LMH - Container.html. There is some mismatched data here. "  }} 
+    {{ end }}
+ 
+  {{ end }}
+  
+  {{- $i = add $i 1 -}}
+   {{/* Move first item in array to end of array (material type)  */}}
+  {{- $newcontainerarray = $newcontainerarray  | append (index $newcontainerarray 0)  -}}
+  {{- $newcontainerarray =  after 1 $newcontainerarray  -}}
+    {{/* If there is only one container, or if there are other numbers tbd  */}}
+  {{ $scratch.SetInMap "scratchofcontainers" (string $i) $newcontainerarray }}
+  {{/*  {{ $scratch.Get "scratchofcontainers"   }} */}}
+  <div>
+    {{ $allContainers := $scratch.Get "scratchofcontainers"   }} 
+    {{ range $allContainers }} 
+    {{- range . -}}{{- . | safeHTML }} {{ end   -}} <br >
+    {{ end  }} 
+     </div>
+  
 </div>
 
