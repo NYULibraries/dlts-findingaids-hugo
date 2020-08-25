@@ -27,23 +27,26 @@
       {{- end -}}
        
       {{/* First add "label" to the array - we'll move it to the end later */}}  
-      {{- $materialtype := .label  | printf "<span class=\"ead-container-mat-type\">(Material Type: %s)</span>"  | printf "%s"  -}}  
+      {{- $materialtype := .label  | printf " <span class=\"ead-container-mat-type\">(Material Type: %s)</span>"  | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $materialtype -}}
+      {{- with .barcode -}}
+      {{- $barcode := . | printf "<span style=\"display:none\" class=\"ead-container-barcode\">%s</span>" | printf "%s"  -}}  
+      {{- $newcontainerarray = $newcontainerarray  | append $barcode  -}}
+      {{- end -}}
       {{/* Add "type" and "value" to the array  */}}
-      {{- $typeandvalue := .value  | printf "<span id =\"%s\" class=\"label formattednote-header\">%s: </span><span  class=\"ead-container-parent\">%s</span>" .id .type | printf "%s"  -}}  
+      {{- $typeandvalue := .value  | printf "<span id=\"%s\" class=\"label formattednote-header\">%s: </span><span class=\"ead-container-parent\">%s</span>" .id .type | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $typeandvalue  -}}
       {{- $parentid1 = .id -}}
      
     {{- else if eq  $parentid1 .parent  -}}  {{/* It is a child? */}}
       {{- $parentid2 = .id -}}
-      {{- $typeandvalueb := .value  | printf "<span  class=\"ead-container-child\">%s: %s</span>" .type | printf "%s"  -}}  
+      {{- $typeandvalueb := .value  | printf ", <span class=\"ead-container-child\">%s: %s</span>" .type | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $typeandvalueb  -}}
     {{- else if eq  $parentid2 .parent -}} {{/*  It is a grandchild?  */}}
-      {{- $typeandvaluec := .value  | printf "<span  class=\"ead-container-grandchild\">%s: %s</span>" .type | printf "%s"  -}}  
+      {{- $typeandvaluec := .value  | printf ", <span class=\"ead-container-grandchild\">%s: %s</span>" .type | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $typeandvaluec  -}}
-      grandchild!: {{ delimit $newcontainerarray ", " }}
     {{- else}}
-      {{- errorf "LMH - Container.html. There is some mismatched data here. "  }} 
+      {{- errorf "LMH - Container.html line 46. There is some mismatched data here. "  }} 
     {{- end -}}
   {{- end -}}
   
@@ -55,8 +58,7 @@
   {{- $scratch.SetInMap "scratchofcontainers" (string $i) $newcontainerarray -}}
   {{- $allContainers := $scratch.Get "scratchofcontainers"   -}} 
   {{- range $allContainers }} 
-    <div class="ead-container">{{- range . -}}{{- . | safeHTML }} {{ end   -}}   </div>
+    <div class="ead-container">{{ delimit . "" }}</div>
   {{- end  }} 
-  
 </div>
 
