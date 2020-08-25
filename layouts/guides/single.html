@@ -133,6 +133,10 @@
    </div>   
  {{- end -}}{{- end -}}
  
+  {{ with $container }}
+    {{- partial "fields/container.html" (dict "current" . ) -}} 
+  {{- end -}}
+
   {{ range $did.abstract }}
     <div class="abstract "><h3 class="label formattednote-header">Abstract</h3>
     <p>{{- .value  | safeHTML  }}</p></div>
@@ -206,9 +210,6 @@
     {{- partial "formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
   {{- end -}}
   
-  {{ with $container }}
-    {{- partial "fields/container.html" (dict "current" . ) -}} 
-  {{- end -}}
   {{ range $archdesc.odd }}
     {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
