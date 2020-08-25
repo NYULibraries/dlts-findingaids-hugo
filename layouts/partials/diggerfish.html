@@ -36,6 +36,9 @@
       {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div> 
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end -}}
+      {{ with $container -}}
+        {{- partial "fields/container.html" (dict "current" .) -}} 
+      {{- end -}}
       {{- range $langmaterial }}
         {{ partial "fields/langmaterial.html" (dict "current" . "classname" "langmaterial" "recursions" $recursions) -}}
       {{- end -}}
@@ -47,7 +50,7 @@
          {{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
         {{- end -}}
        </div>   
-      {{- end }} 
+      {{- end -}} 
       {{ range $physloc -}}
       <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
          {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
@@ -99,9 +102,6 @@
     {{- end -}}
     {{ range $arguments.phystech }}
       {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
-    {{- end -}}
-    {{- with $container -}}
-      {{- partial "fields/container.html" (dict "current" . "unittitle" $unittitle) -}} 
     {{- end -}}
     {{- /*   */ -}}
     {{- if not (ge $recursions 9 )  }}
