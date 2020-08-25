@@ -14,13 +14,9 @@
         {{/* Move first item in array to end of array (material type)  */}}
         {{- $newcontainerarray = $newcontainerarray  | append (index $newcontainerarray 0)  -}}
         {{- $newcontainerarray =  after 1 $newcontainerarray  -}}
-        {{/* Store that previous container info in the scratch variable  */}}
+        {{/*- Store that previous container info in the scratch variable  
+          The index here is just used as a key; it could be any string  -*/}}
         {{- $scratch.SetInMap "scratchofcontainers" (string $i) $newcontainerarray -}}
-      
-        {{/*
-        {{ $allContainers := $scratch.Get "scratchofcontainers"   }} 
-        {{ range $allContainers }} index {{ $i }} {{ range . -}}{{- . | safeHTML  }} {{ end   -}} <br ><hr> {{ end  }} 
-        */}}
         
         {{/* Reset the array, but don't initialize, because of scoping issues  */}}
         {{- $newcontainerarray = slice    -}}
@@ -29,11 +25,14 @@
       {{/* First add "label" to the array - we'll move it to the end later */}}  
       {{- $materialtype := .label  | printf " <span class=\"ead-container-mat-type\">(Material Type: %s)</span>"  | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $materialtype -}}
+      
+      {{/* Add a span for barcode wherever relevant */}}  
       {{- with .barcode -}}
-      {{- $barcode := . | printf "<span style=\"display:none\" class=\"ead-container-barcode\">%s</span>" | printf "%s"  -}}  
-      {{- $newcontainerarray = $newcontainerarray  | append $barcode  -}}
+        {{- $barcode := . | printf "<span style=\"display:none\" class=\"ead-container-barcode\">%s</span>" | printf "%s"  -}}  
+        {{- $newcontainerarray = $newcontainerarray  | append $barcode  -}}
       {{- end -}}
-      {{/* Add "type" and "value" to the array  */}}
+      
+      {{/* Add "type", "id", and "value" to the array  */}}
       {{- $typeandvalue := .value  | printf "<span id=\"%s\" class=\"label formattednote-header\">%s: </span><span class=\"ead-container-parent\">%s</span>" .id .type | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $typeandvalue  -}}
       {{- $parentid1 = .id -}}
@@ -46,7 +45,7 @@
       {{- $typeandvaluec := .value  | printf ", <span class=\"ead-container-grandchild\">%s: %s</span>" .type | printf "%s"  -}}  
       {{- $newcontainerarray = $newcontainerarray  | append $typeandvaluec  -}}
     {{- else}}
-      {{- errorf "LMH - Container.html line 46. There is some mismatched data here. "  }} 
+      {{- errorf "LMH - Container.html line 48. There is some mismatched data here. "  }} 
     {{- end -}}
   {{- end -}}
   
@@ -61,4 +60,3 @@
     <div class="ead-container">{{ delimit . "" }}</div>
   {{- end  }} 
 </div>
-
