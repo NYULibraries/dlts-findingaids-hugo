@@ -1,0 +1,12 @@
+{{- $current := .current -}}
+{{- $h := add .recursions 1 -}}
+{{- $href :=  .current.href   -}}
+<div class="dao" >
+  <div>Title: {{ .current.title }}</div>
+  <div>Role: {{ .current.role }}</div>
+  <div>actuate: {{ .current.actuate }}</div>
+  <div>show: {{ .current.show }}</div>
+  <div>type: {{ .current.type }}</div>
+  <div>audience: {{ .current.audience }}</div>
+  <a href="{{ $href }}">{{  $href }}</a>
+</div>
