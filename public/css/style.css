@@ -306,11 +306,12 @@ main#content {
 .recursions4 {
   margin-left: 50px;
 }
-.emph,
 .emph-italic,
-.ead-emph-italic,
-.ead-emph {
+.ead-emph-italic {
   font-style: italic;
+}
+.ead-emph-bold {
+  font-weight: bold;
 }
 .level-series,
 .level-otherlevel.recursions0 {
