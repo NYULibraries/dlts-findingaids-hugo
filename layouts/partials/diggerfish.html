@@ -104,6 +104,9 @@
     {{ range $arguments.phystech }}
       {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
     {{- end -}}
+    {{- range $dao }}
+      {{ partial "fields/dao.html" (dict "current" . "recursions" $recursions) -}}
+    {{- end -}}
     {{- /*   */ -}}
     {{- if not (ge $recursions 9 )  }}
       {{ if  ($arguments.c)  }}
@@ -113,6 +116,5 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    {{/*  */}}
   </div>
-{{ end }}
+{{- end }}
