@@ -8,21 +8,22 @@
     {{- $level := "notspecifiedlevel"  -}}
     {{- if  (index $arguments "level")  -}}
       {{- $level = $arguments.level  -}}
-    {{- end }} 
+    {{- end}}
     <div class="level-{{  $level  }} recursions{{ $recursions }}">
       {{/*  {{ if  (eq $level "file")  }} FILES {{ end }}  */}}
       {{- $aid := index $arguments "id" -}}
-      
+
       {{- $abstract := index $arguments "did" 0 "abstract"  -}}
       {{- $langmaterial := index $arguments "did" 0 "langmaterial"  -}}
-      {{- $origination := index $arguments "did" 0 "origination"  -}} 
+      {{- $origination := index $arguments "did" 0 "origination"  -}}
       {{- $physdesc := index $arguments "did" 0 "physdesc"  -}}
       {{- $physloc := index $arguments "did" 0 "physloc"  -}}
-      {{- $repository := index $arguments "did" 0 "repository"  -}}     
+      {{- $repository := index $arguments "did" 0 "repository"  -}}
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
-      {{- $unitid := index $arguments "did" 0 "unitid"  -}}  
+      {{- $unitid := index $arguments "did" 0 "unitid"  -}}
       {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
       {{- $container := index $arguments "did" 0 "container"  -}}
+      {{- $dao := index $arguments "did" 0 "dao" -}}
       {{- $recursions := add $recursions 1 -}}
       {{- if (reflect.IsMap ($unittitle)) -}}
         {{- $unittitle = $unittitle.value -}}
@@ -33,28 +34,28 @@
           <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
         {{- end }}
       {{- end }}
-      {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div> 
+      {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div>
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end -}}
       {{ with $container -}}
-        {{- partial "fields/container.html" (dict "current" .) -}} 
+        {{- partial "fields/container.html" (dict "current" .) -}}
       {{- end -}}
       {{- range $langmaterial }}
         {{ partial "fields/langmaterial.html" (dict "current" . "classname" "langmaterial" "recursions" $recursions) -}}
       {{- end -}}
       {{- if ($physdesc) }}
-      <div class="physdesc "><h3 class="label formattednote-header">Extent</h3> 
+      <div class="physdesc "><h3 class="label formattednote-header">Extent</h3>
         {{- range $physdesc -}}
         {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
         {{- if .extent -}}
          {{- range .extent -}}<span>{{- .value }}</span> {{ end -}}<br>{{- end -}}
         {{- end -}}
-       </div>   
-      {{- end -}} 
+       </div>
+      {{- end -}}
       {{ range $physloc -}}
-      <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
+      <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3>
          {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
-      </div>   
+      </div>
       {{- end -}}
       {{- if ($origination) -}}
       <div class="origination">
@@ -105,10 +106,10 @@
     {{- end -}}
     {{- /*   */ -}}
     {{- if not (ge $recursions 9 )  }}
-      {{ if  ($arguments.c)  }} 
+      {{ if  ($arguments.c)  }}
       {{/*  {{ $recursions =add .recursions 1 }}  */}}
         {{ range $arguments.c }}
-               {{ partial "diggerfish.html" (dict "current" . "recursions" $recursions )  }}  
+               {{ partial "diggerfish.html" (dict "current" . "recursions" $recursions )  }}
         {{ end }}
       {{ end }}
     {{ end }}
