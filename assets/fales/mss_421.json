@@ -409,6 +409,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_4",
+                                                        "show": "new",
+                                                        "title": "Email and correspondence",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Email and correspondence: 1995-1997, 2008-2016"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/2016",
@@ -493,6 +509,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_5",
+                                                        "show": "new",
+                                                        "title": "Email",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Email: 2009-2012"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2009/2012",
@@ -562,6 +594,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_6",
+                                                        "show": "new",
+                                                        "title": "Email",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Email: 2012-2015"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2012/2015",
@@ -636,6 +684,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_7",
+                                                        "show": "new",
+                                                        "title": "Email and correspondence",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Email and correspondence: 1997, 2008-2015"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1997/2015",
@@ -1956,6 +2020,22 @@
                                                 "value": "14"
                                             }
                                         ],
+                                        "dao": [
+                                            {
+                                                "actuate": "onRequest",
+                                                "href": "FA_MSS_421_ER_1",
+                                                "show": "new",
+                                                "title": "Photographs",
+                                                "type": "simple",
+                                                "daodesc": {
+                                                    "p": [
+                                                        {
+                                                            "value": "Photographs: 1999-2000"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "1964/2000",
@@ -2815,6 +2895,22 @@
                                                 "parent": "aspace_6b61d12ec89aafd1961bcffaf7c956e4",
                                                 "type": "folder",
                                                 "value": "23-24"
+                                            }
+                                        ],
+                                        "dao": [
+                                            {
+                                                "actuate": "onRequest",
+                                                "href": "FA_MSS_421_ER_2",
+                                                "show": "new",
+                                                "title": "Email",
+                                                "type": "simple",
+                                                "daodesc": {
+                                                    "p": [
+                                                        {
+                                                            "value": "Email: 2008-2015"
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "unitdate": [
@@ -3934,6 +4030,22 @@
                                                         "value": "16"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_8",
+                                                        "show": "new",
+                                                        "title": "General",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "General: 1996-1999, 2013-2015"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1993/2015",
@@ -4432,6 +4544,22 @@
                                                         "value": "421.0071"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_9",
+                                                        "show": "new",
+                                                        "title": "Cochrane, Michelle",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Cochrane, Michelle: 1998-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1993/2003",
@@ -4807,6 +4935,22 @@
                                                         "parent": "aspace_56f48953ce1859af76b1ff2dfe62047b",
                                                         "type": "cassette",
                                                         "value": "421.0078"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_10",
+                                                        "show": "new",
+                                                        "title": "Farber, Celia",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Farber, Celia: 1998-2005"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -5340,6 +5484,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_11",
+                                                        "show": "new",
+                                                        "title": "Lister, Ardele",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Lister, Ardele: 2008-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2008/2008",
@@ -5909,6 +6069,22 @@
                                                         "value": "23"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_12",
+                                                        "show": "new",
+                                                        "title": "Sex Panic!",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Sex Panic!: 1998-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1996/2008",
@@ -6021,6 +6197,22 @@
                                                         "parent": "aspace_7c373be01a3a9849aec8699ee77edde2",
                                                         "type": "cassette",
                                                         "value": "421.0138, 421.0140"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_13",
+                                                        "show": "new",
+                                                        "title": "Sonnabend, Joseph",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Sonnabend, Joseph: 1996-1998"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -6297,6 +6489,22 @@
                                                         "value": "32-34"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_16",
+                                                        "show": "new",
+                                                        "title": "\"AIDS: Return of the Sex Police\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"AIDS: Return of the Sex Police\": 1995-1997"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/1997",
@@ -6403,6 +6611,22 @@
                                                         "value": "3-7"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_15",
+                                                        "show": "new",
+                                                        "title": "\"A Brief History of AIDS Dogma\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"A Brief History of AIDS Dogma\": 1996-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1993/1996",
@@ -6439,6 +6663,22 @@
                                                         "value": "8"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_27",
+                                                        "show": "new",
+                                                        "title": "\"The Co-factor Factor\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"The Co-factor Factor\": 1997-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/1997",
@@ -6459,6 +6699,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_14",
+                                                        "show": "new",
+                                                        "title": "Crixivan Study and Arrest in Philadelphia",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Crixivan Study and Arrest in Philadelphia: 1998-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1998/1998",
@@ -6541,6 +6797,22 @@
                                                         "parent": "aspace_2facd9c5513f131dabb7864bee0c18f7",
                                                         "type": "folder",
                                                         "value": "13-19"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_17",
+                                                        "show": "new",
+                                                        "title": "\"Heterosexual Men and AIDS\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"Heterosexual Men and AIDS\": 1998-"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -6736,6 +7008,22 @@
                                                         "value": "9"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_18",
+                                                        "show": "new",
+                                                        "title": "\u003cemph render=\"italic\"\u003eLittle Sissy\u003c/emph\u003e",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\u003cspan class=\"ead-emph ead-emph-italic\"\u003eLittle Sissy\u003c/span\u003e: 1995-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/1995",
@@ -6790,6 +7078,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_28",
+                                                        "show": "new",
+                                                        "title": "\"The Night Larry Kramer Dissed Me\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"The Night Larry Kramer Dissed Me\": 2005-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2005/2005",
@@ -6809,6 +7113,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_19",
+                                                        "show": "new",
+                                                        "title": "Notes",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Notes: 1995-1998"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/1998",
@@ -6859,6 +7179,22 @@
                                                         "value": "15"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_29",
+                                                        "show": "new",
+                                                        "title": "\"The Original Safe Sex Slut's Guide to Healthy Living\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"The Original Safe Sex Slut's Guide to Healthy Living\": 1997-1998"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1996/1998",
@@ -6895,6 +7231,22 @@
                                                         "value": "13"
                                                     }
                                                 ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_30",
+                                                        "show": "new",
+                                                        "title": "\"The Other Epidemic\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"The Other Epidemic\": 2005-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2005/2005",
@@ -6914,6 +7266,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_21",
+                                                        "show": "new",
+                                                        "title": "\u003cemph render=\"italic\"\u003ePOZ\u003c/emph\u003e biography",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\u003cspan class=\"ead-emph ead-emph-italic\"\u003ePOZ\u003c/span\u003e biography: 2000-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2000/2000",
@@ -7003,6 +7371,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_22",
+                                                        "show": "new",
+                                                        "title": "\"S+M: Sons and Mothers\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"S+M: Sons and Mothers\": 2006-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2006/2006",
@@ -7036,6 +7420,22 @@
                                                         "parent": "aspace_99f35fec92b153971baf7b0f284b06b5",
                                                         "type": "folder",
                                                         "value": "17-18"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_23",
+                                                        "show": "new",
+                                                        "title": "\"Safer-sex Panic\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"Safer-sex Panic\": 1998-"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -7093,6 +7493,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_24",
+                                                        "show": "new",
+                                                        "title": "\"Satire on Gay Articles Declaring Oral Sex a Risk for AIDS\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"Satire on Gay Articles Declaring Oral Sex a Risk for AIDS\": 1995-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "1995/1995",
@@ -7161,6 +7577,22 @@
                                                         "parent": "aspace_aaae6e9480235c6213b575a5b993f346",
                                                         "type": "folder",
                                                         "value": "20"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_25",
+                                                        "show": "new",
+                                                        "title": "\"Silence of the Lambdas\" by Katie Szymanski",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"Silence of the Lambdas\" by Katie Szymanski: 1998-"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -7232,6 +7664,22 @@
                                                         "parent": "aspace_d1fb2f2cc99263c76e95e7aafb168c4b",
                                                         "type": "folder",
                                                         "value": "15"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_26",
+                                                        "show": "new",
+                                                        "title": "\u003cemph render=\"italic\"\u003eStayin' Alive\u003c/emph\u003e",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\u003cspan class=\"ead-emph ead-emph-italic\"\u003eStayin' Alive\u003c/span\u003e: 1995-2009"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -7343,6 +7791,22 @@
                                                         "parent": "aspace_27442f6601c0748cb7fa2ccbf092d5bc",
                                                         "type": "folder",
                                                         "value": "5-8"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_31",
+                                                        "show": "new",
+                                                        "title": "\"The Tragic Death of Robert Gould, M.D.\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"The Tragic Death of Robert Gould, M.D.\": 1998-"
+                                                                }
+                                                            ]
+                                                        }
                                                     }
                                                 ],
                                                 "unitdate": [
@@ -7519,6 +7983,22 @@
                                         "level": "file",
                                         "did": [
                                             {
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "FA_MSS_421_ER_32",
+                                                        "show": "new",
+                                                        "title": "\"Walter Fuck-up\"",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "\"Walter Fuck-up\": 2005-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
                                                 "unitdate": [
                                                     {
                                                         "normal": "2005/2005",
@@ -7722,6 +8202,24 @@
                                                 ]
                                             }
                                         ],
+                                        "dao": [
+                                            {
+                                                "actuate": "onLoad",
+                                                "audience": "external",
+                                                "href": "https://wayback.archive-it.org/7727/*/https://richardberkowitz.com",
+                                                "role": "service",
+                                                "show": "new",
+                                                "title": "Archived website of Richard Berkowitz",
+                                                "type": "simple",
+                                                "daodesc": {
+                                                    "p": [
+                                                        {
+                                                            "value": "Archived website of Richard Berkowitz"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -7883,6 +8381,24 @@
                                                 "value": "in 1 archived website."
                                             }
                                         ]
+                                    }
+                                ],
+                                "dao": [
+                                    {
+                                        "actuate": "onLoad",
+                                        "audience": "external",
+                                        "href": "https://wayback.archive-it.org/7727/*/https://richardberkowitz.com",
+                                        "role": "service",
+                                        "show": "new",
+                                        "title": "Archived website of Richard Berkowitz",
+                                        "type": "simple",
+                                        "daodesc": {
+                                            "p": [
+                                                {
+                                                    "value": "Archived website of Richard Berkowitz"
+                                                }
+                                            ]
+                                        }
                                     }
                                 ],
                                 "origination": [
