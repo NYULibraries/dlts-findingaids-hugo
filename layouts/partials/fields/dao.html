@@ -16,7 +16,7 @@
     {{ end -}}
   {{ end }}
   {{ with $hrefurl.Scheme -}}
-    <div> <a href="{{ $href }}">{{  $href }}</a></div>
+    <div><i class="fas fa-bolt fa-1x"></i> <a class="dao" href="{{ $href }}">{{  $href }}</a></div>
   {{- else -}}
   <div>identifier: {{ $href }}</div>
   {{- end -}}

@@ -1,0 +1,29 @@
+{{- $current := .current -}}
+{{- $h := add .recursions 1 -}}
+{{- $href := trim  .current.href "\n "  -}}
+ {{ $hrefurl := urls.Parse $href }}
+<div class="dao" >
+  <div>Title: {{ .current.title }}</div>
+  <div>Role: {{ .current.role }}</div>
+  <div>actuate: {{ .current.actuate }}</div>
+  <div>show: {{ .current.show }}</div>
+  {{ with .current.type  -}}
+    {{- if ne . "simple" -}}
+
+      <div>type: {{ . }}</div>{{- end -}}
+      {{- warnf "not simple " .  }}
+    {{ end -}}
+  {{ with .current.audience  -}}
+    <div>Audience: {{ . }}</div>
+  {{- else -}}
+    {{- if eq . "internal" -}}
+      {{- errorf "dao.html line 15. Internal item here. "  }}
+    {{ end -}}
+  {{ end }}
+  {{ with $hrefurl.Scheme -}}
+    <div><i class="fas fa-bolt fa-1x"></i>  <a class="dao" href="{{ $href }}">{{  $href }}</a></div>
+  {{- else -}}
+  <div>identifier: {{ $href }}</div>
+  {{- end -}}
+
+</div>

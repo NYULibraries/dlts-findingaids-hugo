@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8" />
 
-    {{ partial "meta.html" .context -}}  
+    {{ partial "meta.html" .context -}}
     <title>{{-  partial "unittitle.html" (dict "archdesc" $archdesc )  }}</title>
     <link rel="canonical" href="{{ .context.Permalink }}" />
- 
+
     {{ partial "head_includes.html" . }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script src="https://kit.fontawesome.com/b9624e8a0f.js" crossorigin="anonymous"></script>
   </head>
-
