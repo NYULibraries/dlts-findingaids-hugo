@@ -1,6 +1,7 @@
 {{- $current := .current -}}
 {{- $h := add .recursions 1 -}}
 {{- $href := trim  .current.href "\n "  -}}
+{{- $title := trim  .current.title "\n "  -}}
  {{ $hrefurl := urls.Parse $href }}
 <div class="dao" >
   <div>Title: {{ .current.title }}</div>
@@ -12,13 +13,16 @@
     <div>Audience: {{ . }}</div>
   {{- else -}}
     {{- if eq . "internal" -}}
-      {{- errorf "dao.html line 15. Internal item here. "  }}
+      {{- errorf "dao.html line 15. Audience = Internal item here. "  }}
     {{ end -}}
   {{ end }}
   {{ with $hrefurl.Scheme -}}
-    <div><i class="fas fa-bolt fa-1x"></i> <a class="dao" href="{{ $href }}">{{  $href }}</a></div>
+    <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> <a class="dao" href="{{ $href }}">{{ $title }} {{  $href }}</a></div>
   {{- else -}}
-  <div>identifier: {{ $href }}</div>
+  <div class="dao-identifier">Identifier: {{ $href }}</div>
+  {{- end }}
+  {{ range  .current.daodesc.p  -}}
+    <div class="dao-description">Description: {{ .value }}</div>
   {{- end -}}
 
 </div>
