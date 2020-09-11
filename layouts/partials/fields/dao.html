@@ -2,27 +2,60 @@
 {{- $h := add .recursions 1 -}}
 {{- $href := trim  .current.href "\n "  -}}
 {{- $title := trim  .current.title "\n "  -}}
- {{ $hrefurl := urls.Parse $href }}
-<div class="dao" >
-  <div>Title: {{ .current.title }}</div>
-  <div>Role: {{ .current.role }}</div>
-  <div>actuate: {{ .current.actuate }}</div>
-  <div>show: {{ .current.show }}</div>
-  <div>type: {{ .current.type }}</div>
-  {{ with .current.audience  -}}
-    <div>Audience: {{ . }}</div>
-  {{- else -}}
-    {{- if eq . "internal" -}}
-      {{- errorf "dao.html line 15. Audience = Internal item here. "  }}
-    {{ end -}}
-  {{ end }}
-  {{ with $hrefurl.Scheme -}}
-    <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> <a class="dao" href="{{ $href }}">{{ $title }} {{  $href }}</a></div>
-  {{- else -}}
-  <div class="dao-identifier">Identifier: {{ $href }}</div>
-  {{- end }}
-  {{ range  .current.daodesc.p  -}}
-    <div class="dao-description">Description: {{ .value }}</div>
-  {{- end -}}
+{{- $hrefurl := urls.Parse $href }}
+{{- $daodesc := slice }}
+{{- $daodescstring := "" }}
+{{ range  .current.daodesc.p  -}}
+  {{ $daodesc  = $daodesc | append .value }}
+{{- end -}}
+{{ $daodescstring = delimit $daodesc "; "   }}
 
+{{- $hrefescaped := $href | replaceRE "^https?://[^/]+/(.*)" "$1"   -}}
+{{- $hrefescaped2 := replace $hrefescaped "/" "" -}}
+
+<div class="dao card shadow-sm" >
+  <div class="card-header" >Raw Data</div>
+    <div class=" card-body" >
+      <div>Title: {{ .current.title }}</div>
+      <div>Role: {{ .current.role }}</div>
+      <div>actuate: {{ .current.actuate }}</div>
+      <div>show: {{ .current.show }}</div>
+      <div>type: {{ .current.type }}</div>
+      <div>href: {{ .current.href }}</div>
+
+      {{ range  .current.daodesc.p  -}}
+        <div class="dao-description">Description: {{ .value }}</div>
+      {{- end -}}
+      {{ with .current.audience  -}}
+        <div>Audience: {{ . }}</div>
+      {{- else -}}
+        {{- if eq . "internal" -}}
+          {{- errorf "dao.html line 15. Audience = Internal item here. "  }}
+        {{ end -}}
+      {{ end }}
+    </div>
+  </div><br>
+
+  <div class="dao card shadow-sm" >
+    <div class="card-header" >User-facing display, using logic - Work In Progress </div>
+    <div class=" card-body" >
+    {{ with $hrefurl.Scheme -}}
+
+      {{ if in $hrefurl.Host "aeon.library.nyu.edu" }}
+        <div style="float: right;"><a role="button" class="aeon-button btn btn-info" href="{{ $href }}">Request Reading Room Access</a></div>
+        <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> Electronic Record: <b>{{ $daodescstring }} </b></div>
+      {{- else -}}
+        <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> <b><a class="dao" href="{{ $href }}">{{ $daodescstring }}</a></b></div>
+      {{ end }}
+
+  {{- else -}}
+    <div class="dao-identifier">Identifier: {{ $href }}</div>
+    {{ range  .current.daodesc.p  -}}
+    <div class="dao-description">Description: {{ $daodescstring }} </div>
+    {{- end -}}
+  {{- end }}
+
+
+
+</div>
 </div>

@@ -287,6 +287,7 @@ header.main-header {
   height: 150px;
   width: 100%;
   background-color: white;
+  z-index: 1000;
 }
 #sidebar {
   position: fixed;
