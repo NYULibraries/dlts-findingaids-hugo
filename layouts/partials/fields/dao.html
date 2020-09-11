@@ -6,7 +6,7 @@
 {{- $daodesc := slice }}
 {{- $daodescstring := "" }}
 {{ range  .current.daodesc.p  -}}
-  {{ $daodesc  = $daodesc | append .value }}
+  {{ $daodesc  = $daodesc | append ( .value | safeHTML ) }}
 {{- end -}}
 {{ $daodescstring = delimit $daodesc "; "   }}
 
@@ -16,7 +16,7 @@
 <div class="dao card shadow-sm" >
   <div class="card-header" >Raw Data</div>
     <div class=" card-body" >
-      <div>Title: {{ .current.title }}</div>
+      <div>Title: {{ .current.title | safeHTML }}</div>
       <div>Role: {{ .current.role }}</div>
       <div>actuate: {{ .current.actuate }}</div>
       <div>show: {{ .current.show }}</div>
@@ -24,7 +24,7 @@
       <div>href: {{ .current.href }}</div>
 
       {{ range  .current.daodesc.p  -}}
-        <div class="dao-description">Description: {{ .value }}</div>
+        <div class="dao-description">Description: {{ .value | safeHTML }}</div>
       {{- end -}}
       {{ with .current.audience  -}}
         <div>Audience: {{ . }}</div>
