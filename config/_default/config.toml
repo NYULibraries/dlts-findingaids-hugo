@@ -1,12 +1,12 @@
 baseURL = "http://localhost/findingaids/"
 languageCode = "en-us"
-title = "Finding Aids Data Model 4"
+title = "Finding Aids Data Model 5"
 disableKinds = ["taxonomy", "taxonomyTerm"]
- 
-[params]
-  
 
-  
+[params]
+
+
+
 [outputs]
   home = ["HTML"]
   section = ["HTML"]
@@ -37,6 +37,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     mediaType = "text/html"
     notAlternative = false
     permalinkable = true
-  
+
 
 

@@ -1,4 +1,4 @@
-baseURL = "https://stageweb1.dlib.nyu.edu/ux/findingaids/datamodel_v4/"
+baseURL = "https://stageweb1.dlib.nyu.edu/ux/findingaids/datamodel_v5/"
 languageCode = "en-us"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
