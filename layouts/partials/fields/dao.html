@@ -3,6 +3,7 @@
 {{- $href := trim  .current.href "\n "  -}}
 {{- $title := trim  .current.title "\n "  -}}
 {{- $hrefurl := urls.Parse $href }}
+{{- $role :=  .current.role }}
 {{- $daodesc := slice }}
 {{- $daodescstring := "" }}
 {{ range  .current.daodesc.p  -}}
@@ -14,10 +15,10 @@
 {{- $hrefescaped2 := replace $hrefescaped "/" "" -}}
 
 <div class="dao card shadow-sm" >
-  <div class="card-header" >Raw Data</div>
+  <div class="card-header" >DAO: Raw Data</div>
     <div class=" card-body" >
       <div>Title: {{ .current.title | safeHTML }}</div>
-      <div>Role: {{ .current.role }}</div>
+      <div>Role: {{ $role }}</div>
       <div>actuate: {{ .current.actuate }}</div>
       <div>show: {{ .current.show }}</div>
       <div>type: {{ .current.type }}</div>
@@ -37,23 +38,38 @@
   </div><br>
 
   <div class="dao card shadow-sm" >
-    <div class="card-header" >User-facing display, using logic - Work In Progress </div>
-    <div class=" card-body" >
-    {{ with $hrefurl.Scheme -}}
+    <div class="card-header" >User-facing display - Work In Progress </div>
+    <div class="card-body" >
+    {{- with $hrefurl.Scheme -}}
+      {{- $whichicon := "fa-bolt" -}}
+      {{- $daolabel := "Digital materials" -}}
+      {{- if  $role -}}
+        {{- if eq $role "audio-service"}}
+          {{- $whichicon = "fa-file-audio" }}
+          {{- $daolabel = "Stream or download audio" }}
+        {{- else if eq $role "image-service" }}
+          {{ -$whichicon = "fa-file-image" -}}
+          {{- $daolabel = "View digitized images" }}
+        {{- else if eq $role "video-service" }}
+          {{- $whichicon = "fa-file-video" -}}
+          {{- $daolabel = "Stream video" }}
+        {{- end -}}
+      {{- end -}}
+      <h5 class="formattednote-header">{{- $daolabel -}}</h5>
 
-      {{ if in $hrefurl.Host "aeon.library.nyu.edu" }}
+      {{- if in $hrefurl.Host "aeon.library.nyu.edu" -}}
         <div style="float: right;"><a role="button" class="aeon-button btn btn-info" href="{{ $href }}">Request Reading Room Access</a></div>
-        <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> Electronic Record: <b>{{ $daodescstring }} </b></div>
+        <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> Electronic Record: <b>{{ $daodescstring }} </b></div>
       {{- else -}}
-        <div class="dao-href"><i class="fas fa-bolt fa-1x"></i> <b><a class="dao" href="{{ $href }}">{{ $daodescstring }}</a></b></div>
+        <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> <b><a class="dao" href="{{ $href }}">{{ $daodescstring }}</a></b></div>
       {{ end }}
 
   {{- else -}}
-    <div class="dao-identifier">Identifier: {{ $href }}</div>
+    <div class="dao-identifier">Href: {{ $href }}</div>
     {{ range  .current.daodesc.p  -}}
-    <div class="dao-description">Description: {{ $daodescstring }} </div>
+    <div class="dao-description">{{ $daodescstring }} </div>
     {{- end -}}
-  {{- end }}
+  {{- end -}}
 
 
 
