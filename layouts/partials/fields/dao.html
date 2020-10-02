@@ -58,10 +58,10 @@
       <h5 class="formattednote-header">{{- $daolabel -}}</h5>
 
       {{- if in $hrefurl.Host "aeon.library.nyu.edu" -}}
-        <div style="float: right;"><a role="button" class="aeon-button btn btn-info" href="{{ $href }}">Request Reading Room Access</a></div>
+        <div style="float: right;"><a role="button" target="_blank" class="aeon-button btn btn-info" href="{{ $href }}">Request Reading Room Access</a></div>
         <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> Electronic Record: <b>{{ $daodescstring }} </b></div>
       {{- else -}}
-        <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> <b><a class="dao" href="{{ $href }}">{{ $daodescstring }}</a></b></div>
+        <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> <b><a class="dao"  target="_blank"  href="{{ $href }}">{{ $daodescstring }}</a></b></div>
       {{ end }}
 
   {{- else -}}
