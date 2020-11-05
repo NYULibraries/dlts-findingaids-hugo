@@ -16,7 +16,7 @@
 
 <div class="dao card shadow-sm" >
   <div class="card-header" >DAO: Raw Data</div>
-    <div class=" card-body" >
+    <div class="card-body" >
       <div>Title: {{ .current.title | safeHTML }}</div>
       <div>Role: {{ $role }}</div>
       <div>actuate: {{ .current.actuate }}</div>
@@ -27,7 +27,6 @@
       {{ range  .current.daodesc.p  -}}
         <div class="dao-description">Description: {{ .value | safeHTML }}</div>
       {{- end -}}
-  
     </div>
   </div><br>
 
@@ -35,6 +34,7 @@
     <div class="card-header" >User-facing display - Work In Progress </div>
     <div class="card-body" >
     {{- with $hrefurl.Scheme -}}
+    {{/* If it's http or https or otherwise a web link - https://gohugo.io/functions/urls.parse/#readout  */}}
       {{- $whichicon := "fa-bolt" -}}
       {{- $daolabel := "Digital materials" -}}
       {{- if  $role -}}
