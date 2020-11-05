@@ -27,13 +27,7 @@
       {{ range  .current.daodesc.p  -}}
         <div class="dao-description">Description: {{ .value | safeHTML }}</div>
       {{- end -}}
-      {{ with .current.audience  -}}
-        <div>Audience: {{ . }}</div>
-      {{- else -}}
-        {{- if eq . "internal" -}}
-          {{- errorf "dao.html line 15. Audience = Internal item here. "  }}
-        {{ end -}}
-      {{ end }}
+  
     </div>
   </div><br>
 
