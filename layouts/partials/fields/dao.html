@@ -36,7 +36,7 @@
     {{- with $hrefurl.Scheme -}}
     {{/* If it's http or https or otherwise a web link - https://gohugo.io/functions/urls.parse/#readout  */}}
       {{- $whichicon := "fa-bolt" -}}
-      {{- $daolabel := "Digital materials" -}}
+      {{- $daolabel := "Unknown role" -}}
       {{- if  $role -}}
         {{- if eq $role "audio-service"}}
           {{- $whichicon = "fa-file-audio" }}
@@ -47,6 +47,12 @@
         {{- else if eq $role "video-service" }}
           {{- $whichicon = "fa-file-video" -}}
           {{- $daolabel = "Stream video" }}
+        {{- else if eq $role "external-link" }}
+          {{- $whichicon = "fa-external-link-alt" -}}
+          {{- $daolabel = "External link" }}  
+        {{- else if eq $role "electronic-records-service" }}
+          {{- $whichicon = "fa-bolt" -}}
+          {{- $daolabel = "Digital materials" }} 
         {{- end -}}
       {{- end -}}
       <h5 class="formattednote-header">{{- $daolabel -}}</h5>
