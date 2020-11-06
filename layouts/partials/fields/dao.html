@@ -36,7 +36,7 @@
     {{- with $hrefurl.Scheme -}}
     {{/* If it's http or https or otherwise a web link - https://gohugo.io/functions/urls.parse/#readout  */}}
       {{- $whichicon := "fa-bolt" -}}
-      {{- $daolabel := "Unknown role" -}}
+      {{- $daolabel := "UnknownDAO role" -}}
       {{- if  $role -}}
         {{- if eq $role "audio-service"}}
           {{- $whichicon = "fa-file-audio" }}
