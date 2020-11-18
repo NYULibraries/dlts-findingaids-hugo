@@ -143,7 +143,7 @@
   {{ end -}}
     
   {{ range $archdesc.acqinfo }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "acqinfo" "recursions" 2 ) -}}
   {{- end -}}
   
   {{ range $archdesc.bibliography }}
@@ -151,7 +151,7 @@
   {{- end -}} 
     
   {{ range $archdesc.bioghist }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "bioghist" "recursions" 2 ) -}}
   {{- end -}}
 
   {{ range $archdesc.controlaccess }}
@@ -159,59 +159,59 @@
   {{- end -}}
   
   {{ range $archdesc.scopecontent }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.accessrestrict }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.userestrict }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "userestrict" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "userestrict" "recursions" 2) -}}
   {{- end -}}
 
   {{ range $archdesc.prefercite }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "prefercite" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "prefercite" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.processinfo }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "processinfo" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "processinfo" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.arrangement }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "arrangement" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.custodhist }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "custodhist" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "custodhist" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.phystech }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "phystech" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.appraisal }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "appraisal" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "appraisal" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.separatedmaterial }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "separatedmaterial" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "separatedmaterial" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.relatedmaterial }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.accruals }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "accruals" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "accruals" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.altformatavailable }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "altformatavailable" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $archdesc.odd }}
-    {{- partial "formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
+    {{- partial "fields/formattednote.html" (dict "current" . "classname" "odd" "recursions" 2) -}}
   {{- end -}}
   
   {{ range $eadheader.revisiondesc }}

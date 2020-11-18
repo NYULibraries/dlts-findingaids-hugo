@@ -60,43 +60,43 @@
       {{- end }}
     </div>{{- end -}}
     {{ range $arguments.scopecontent }}
-      {{ partial "formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
+      {{ partial "fields/formattednote.html" (dict "current" . "classname" "scopecontent" "recursions" $recursions) -}}
     {{ end }}
     {{ range $arguments.arrangement }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "arrangement" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "arrangement" "recursions" $recursions) -}}
     {{ end }}
     {{ range $arguments.bioghist }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "bioghist" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "bioghist" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.accessrestrict }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "accessrestrict" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.accruals }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "accruals" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "accruals" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.appraisal }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "appraisal" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "appraisal" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.controlaccess }}
       {{ partial "controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.relatedmaterial }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.custodhist }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "custodhist" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "custodhist" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.userestrict }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "userestrict" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "userestrict" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.prefercite }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "prefercite" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "prefercite" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.processinfo }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "processinfo" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "processinfo" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.phystech }}
-      {{- partial "formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
+      {{- partial "fields/formattednote.html" (dict "current" . "classname" "phystech" "recursions" $recursions) -}}
     {{- end -}}
     {{- range $dao }}
       {{ partial "fields/dao.html" (dict "current" . "recursions" $recursions) -}}
