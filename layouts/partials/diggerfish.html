@@ -44,7 +44,7 @@
         {{ partial "fields/langmaterial.html" (dict "current" . "classname" "langmaterial" "recursions" $recursions) -}}
       {{- end -}} 
       {{- if ($physdesc) }}
-      {{ partial "fields/physdesc.html" (dict "current" $physdesc "classname" "physdesc" "recursions" $recursions) -}}
+        {{ partial "fields/physdesc.html" (dict "current" $physdesc "classname" "physdesc" "recursions" $recursions) -}}
       {{- end -}}
       {{ range $physloc -}}
       <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3>
