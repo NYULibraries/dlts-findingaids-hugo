@@ -122,11 +122,10 @@
     <h3 class="formattednote-header">Repository</h3>
     {{- range .corpname -}}<span class="corpname">{{ .value }}</span>{{- if .role -}} <span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- end -}}
   </div>{{ end }}
- 
-  <div class="physdesc"><h3 class="label formattednote-header">Extent</h3>
-  {{- range $did.physdesc -}}{{- range .extent -}}<span>{{- .value | safeHTML }}</span> {{ end -}}<br>{{- end -}}
-  </div>
- 
+  {{ if ($did.physdesc) }}
+  {{ partial "fields/physdesc.html" (dict "current" $did.physdesc "classname" "physdesc" "recursions" 2) -}}
+  {{- end }}
+
   {{ if ($did.physloc) -}}{{- range $did.physloc -}}
   <div class="physloc" id="{{ .id }}"><h3 class="label formattednote-header">physloc</h3> 
     {{- if .value -}}<span>{{- .value }}</span>{{- end -}}
