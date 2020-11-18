@@ -21,18 +21,16 @@
       {{- $repository := index $arguments "did" 0 "repository"  -}}
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
       {{- $unitid := index $arguments "did" 0 "unitid"  -}}
-      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 -}}
+      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 "value" -}}
       {{- $container := index $arguments "did" 0 "container"  -}}
       {{- $dao := index $arguments "did" 0 "dao" -}}
       {{- $recursions := add $recursions 1 -}}
-      {{- if (reflect.IsMap ($unittitle)) -}}
-        {{- $unittitle = $unittitle.value -}}
-        {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
-        {{- if (lt $recursions 7 ) -}}
-          <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}</h{{- $recursions -}}>
-        {{- else }}
+
+      {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
+      {{- if (lt $recursions 7 ) -}}
+        <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}</h{{- $recursions -}}>
+      {{- else }}
           <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
-        {{- end }}
       {{- end }}
       {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div>
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>

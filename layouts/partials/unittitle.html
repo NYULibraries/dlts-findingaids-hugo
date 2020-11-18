@@ -14,5 +14,5 @@
 {{- if (reflect.IsMap ($unittitle)) }}
   {{- $unittitle = $unittitle.value }}
 {{ end }}
-{{ $unittitle = $unittitle | safeHTML }}
+{{ $unittitle = htmlUnescape $unittitle | safeHTML }}
 {{ return $unittitle }}

@@ -14,22 +14,11 @@
   <main id="content" class="">
   {{ partial "menu-toggle-button.html" . }}
   
-
-  
   {{- if $archdesc }}
-  
-  {{- $did := index $archdesc "did" }}
-  {{ if (reflect.IsSlice ($did )) }}
-  {{ $did = index $did 0 }}
-  {{ end }}
-
-  {{- $container := index $did "container" -}}
-  {{- $unittitle := index $did "unittitle" 0}}
-  {{- if (reflect.IsMap ($unittitle)) }}
-      {{- $unittitle = $unittitle.value }}
-  {{- end }}
-
-  <h2 class="page-title">{{ $unittitle | safeHTML }}</h2>
+    {{- $did := index $archdesc "did" 0 }}
+    {{- $container := index $did "container" -}}
+    {{- $unittitle := index $did "unittitle" 0 "value"}}
+    <h2 class="page-title">{{ htmlUnescape $unittitle | safeHTML }}</h2>
 
   <div class="publisher">
   
