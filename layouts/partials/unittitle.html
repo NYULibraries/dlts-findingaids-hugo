@@ -1,18 +1,3 @@
-{{- $archdesc := .archdesc -}}
-
-{{- $did := index $archdesc "did" }}
-{{ if (reflect.IsSlice ($did )) }}
-{{ $did = index $did 0 }}
-{{ end }}
-
-{{- $unittitle := index $did "unittitle"}}
-
-{{- if (reflect.IsSlice ($unittitle)) }}
-  {{- $unittitle = index $unittitle 0 }}
-{{ end }}
-
-{{- if (reflect.IsMap ($unittitle)) }}
-  {{- $unittitle = $unittitle.value }}
-{{ end }}
-{{ $unittitle = htmlUnescape $unittitle | safeHTML }}
-{{ return $unittitle }}
+{{- $unittitle := index .archdesc "did" 0 "unittitle" 0 "value"  -}}
+{{- $unittitle = htmlUnescape $unittitle | safeHTML -}}
+{{- return $unittitle -}}
