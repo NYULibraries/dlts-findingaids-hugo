@@ -155,7 +155,7 @@
   {{- end -}}
 
   {{ range $archdesc.controlaccess }}
-  {{ partial "controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" 2 ) -}}   
+  {{ partial "fields/controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" 2 ) -}}   
   {{- end -}}
   
   {{ range $archdesc.scopecontent }}

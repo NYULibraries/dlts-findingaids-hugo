@@ -78,7 +78,7 @@
       {{- partial "fields/formattednote.html" (dict "current" . "classname" "appraisal" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.controlaccess }}
-      {{ partial "controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" $recursions) -}}
+      {{ partial "fields/controlaccess.html" (dict "current" . "classname" "controlaccess" "recursions" $recursions) -}}
     {{- end -}}
     {{ range $arguments.relatedmaterial }}
       {{- partial "fields/formattednote.html" (dict "current" . "classname" "relatedmaterial" "recursions" $recursions) -}}
