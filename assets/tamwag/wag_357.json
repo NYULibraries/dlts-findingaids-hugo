@@ -163,10 +163,23 @@
                         "level": "file",
                         "did": [
                             {
+                                "container": [
+                                    {
+                                        "label": "electronic records",
+                                        "id": "aspace_d4b4a84eb0ca2437f366c65685b35bf6",
+                                        "type": "E-records",
+                                        "value": "Electronic Records"
+                                    },
+                                    {
+                                        "id": "aspace_f38443d7f4a6441cc054f686c0f3d0a5",
+                                        "parent": "aspace_d4b4a84eb0ca2437f366c65685b35bf6",
+                                        "type": "E-records",
+                                        "value": "TW_WAG_357_ER_1"
+                                    }
+                                ],
                                 "dao": [
                                     {
                                         "actuate": "onLoad",
-                                        "audience": "external",
                                         "href": "https://aeon.library.nyu.edu/Logon?Action=10\u0026Form=31\u0026Value= http://dlib.nyu.edu/findingaids/ead/tamwag/wag_357.xml\u0026view=xml",
                                         "role": "electronic-records-service",
                                         "show": "new",
@@ -278,8 +291,6 @@
         {
             "eadid": [
                 {
-                    "countrycode": "US",
-                    "mainagencycode": "US-NNU-TL",
                     "url": "http://dlib.nyu.edu/findingaids/html/tamwag/wag_357",
                     "value": "wag_357"
                 }
@@ -347,7 +358,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-11-04 11:47:26 -0500"
+                                "2020-12-11 11:23:33 -0500"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

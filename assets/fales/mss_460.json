@@ -251,10 +251,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_18c959fbc8d04594ee81895afa3ccc49",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_a1017cca0557483f64f454fda2ff3ca4",
+                                                        "parent": "aspace_18c959fbc8d04594ee81895afa3ccc49",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_1"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/s7h44pwg",
                                                         "role": "video-service",
                                                         "show": "embed",
@@ -305,12 +320,27 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_7898f6d24cb36748b87e920819c98858",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_dad8175c1f3455b108a2d048a761afa0",
+                                                        "parent": "aspace_7898f6d24cb36748b87e920819c98858",
+                                                        "type": "object",
+                                                        "value": " FA_MSS_460_ER_32"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/bzkh1f4x",
-                                                        "role": "video-service",
+                                                        "role": "electronic-records-service",
                                                         "show": "embed",
                                                         "type": "simple",
                                                         "daodesc": {
@@ -344,6 +374,16 @@
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_5f36df7d2e838b2a87ed0053bd9ee0d4",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -378,6 +418,16 @@
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_9b7ce21f78bfd568d7581105899ccff9",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "dao": [
                                             {
                                                 "actuate": "onRequest",
@@ -463,12 +513,27 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_43067d6341b33435dd0876327aaf51c1",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_58b2c8b3137eac6e1d09bca41d33a8df",
+                                                        "parent": "aspace_43067d6341b33435dd0876327aaf51c1",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_14"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/ngf1vpdf",
-                                                        "role": "video-service",
+                                                        "role": "electronic-records-service",
                                                         "show": "new",
                                                         "type": "simple",
                                                         "daodesc": {
@@ -494,59 +559,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Chrem, Orieta -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_c8182235d9443c23459ad5032aad1a05",
-                                        "level": "file",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/79cnpb82",
-                                                        "role": "video-service",
-                                                        "show": "embed",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Orieta Chrem -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid7033"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Chrem, Orieta -- Performance"
                                                     }
                                                 ]
                                             }
@@ -584,10 +596,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_986662d235eb37cc3298881e0561d5fb",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_a675c4ae9fc1f781d5460175bc95ba9c",
+                                                        "parent": "aspace_986662d235eb37cc3298881e0561d5fb",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_17"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -619,10 +646,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_c8182235d9443c23459ad5032aad1a05",
+                                        "level": "file",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_f34da983d99c56a724740c61c0877ca9",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_e64702f94d67cb67967f555b62d9e7f3",
+                                                        "parent": "aspace_f34da983d99c56a724740c61c0877ca9",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_2"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/79cnpb82",
+                                                        "role": "electronic-records-service",
+                                                        "show": "embed",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Orieta Chrem -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid7033"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Chrem, Orieta -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_8c63d7409a794f672c0ccea9bc1628fa",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -673,10 +778,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_3532ba23b119efa0e6d1395cbfa0625f",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_30c6c1c5b7d03140277eed791cb8bcbe",
+                                                        "parent": "aspace_3532ba23b119efa0e6d1395cbfa0625f",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_4"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/hqbzknvr",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -704,59 +824,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Covello, Julie -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_0e3b82f1bf6dcc14aa3ab87d3b18ef61",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "4.36 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/3j9kd9sz",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Julie Covello -- Performance: 2015-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2015/2015",
-                                                        "value": "2015"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5750"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Covello, Julie -- Performance"
                                                     }
                                                 ]
                                             }
@@ -794,10 +861,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_c312937f88002de29e6d78f9bf38c0b4",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_0db8e704de011824633bdde6fb3c8212",
+                                                        "parent": "aspace_c312937f88002de29e6d78f9bf38c0b4",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_3"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -829,10 +911,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_0e3b82f1bf6dcc14aa3ab87d3b18ef61",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "4.36 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_a1d4914100ccd0d352e56ebf256ed30d",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_52ee8c3ecdd879d4e812047136fba1e3",
+                                                        "parent": "aspace_a1d4914100ccd0d352e56ebf256ed30d",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_8"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/3j9kd9sz",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Julie Covello -- Performance: 2015-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2015/2015",
+                                                        "value": "2015"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5750"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Covello, Julie -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_99ade90c8cfd4d942334e54cef9dc27e",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2015/2016",
@@ -863,6 +1023,22 @@
                                                         "value": "in 2 spreadsheets."
                                                     }
                                                 ]
+                                            }
+                                        ],
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "electronic records",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_7290e6d3390c48c8b9684bfa0f24ca07",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            },
+                                            {
+                                                "id": "aspace_65dc0dd43fb49e4831d1437873a38d46",
+                                                "parent": "aspace_7290e6d3390c48c8b9684bfa0f24ca07",
+                                                "type": "object",
+                                                "value": "FA_MSS_460_ER_9"
                                             }
                                         ],
                                         "dao": [
@@ -935,10 +1111,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_da66915f256653751d2b7074b48bce86",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_0d1a42ab6b4eefc8c1d5d897d7d9485e",
+                                                        "parent": "aspace_da66915f256653751d2b7074b48bce86",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_10"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/cz8w9n9c",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -966,59 +1157,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Jäger, Friederike -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_9c5c0655f35b850cb5454a1f6cbc78f4",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "2.87 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/zs7h49g8",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Friederike Jäger -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5753"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Jäger, Friederike -- Performance"
                                                     }
                                                 ]
                                             }
@@ -1056,10 +1194,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_176ace017fe018f47678df5750d9933c",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_a85c66f95361dbc17ffe2fefa42ab502",
+                                                        "parent": "aspace_176ace017fe018f47678df5750d9933c",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_15"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -1091,10 +1244,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_9c5c0655f35b850cb5454a1f6cbc78f4",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "2.87 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_38e34e44a7412cddac4daa12adf41375",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_630d34bbb675540a2ab93c72bac79174",
+                                                        "parent": "aspace_38e34e44a7412cddac4daa12adf41375",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_5"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/zs7h49g8",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Friederike Jäger -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5753"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Jäger, Friederike -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_014f3458029a0f3003987f6c4731ec0b",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -1145,10 +1376,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_b7a61182a675d2257e400219ef570678",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_ee78202103d99fd4de40a27ee4d82cee",
+                                                        "parent": "aspace_b7a61182a675d2257e400219ef570678",
+                                                        "type": "object",
+                                                        "value": " FA_MSS_460_ER_16"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/866t1mt9",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -1176,59 +1422,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Kathryn, Julie -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_bc19f074b130e8d187d8a85ebc9f2c00",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3.18 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/v15dv8zt",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Julie Kathryn -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5756"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Kathryn, Julie -- Performance"
                                                     }
                                                 ]
                                             }
@@ -1266,10 +1459,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_3a910c7ec5bba692a2fcc30cee4a2b65",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_79c83733fa8c2c72cdcee397c8479a64",
+                                                        "parent": "aspace_3a910c7ec5bba692a2fcc30cee4a2b65",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_6"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -1301,10 +1509,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_bc19f074b130e8d187d8a85ebc9f2c00",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3.18 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_65ce2eb7a08ce7e356ebe0683b24d122",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_b79b6387c0e97bd1bc1b113acba0ccf2",
+                                                        "parent": "aspace_65ce2eb7a08ce7e356ebe0683b24d122",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_18"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/v15dv8zt",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Julie Kathryn -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5756"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Kathryn, Julie -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_26192621e26823225edb2fb1b9f07133",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -1355,10 +1641,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_2730cc746cc0d0678228254020abbf20",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_e11a824cc5fdd094dcc51769217cff94",
+                                                        "parent": "aspace_2730cc746cc0d0678228254020abbf20",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_19"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/4j0zpj13",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -1386,59 +1687,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Kato, Minami -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_42865f4db8ccee52618a8411ebcd63f2",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3.22 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/q83bk8df",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Minami Kato -- Performance: 2015-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2015/2015",
-                                                        "value": "2015"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5759"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Kato, Minami -- Performance"
                                                     }
                                                 ]
                                             }
@@ -1476,10 +1724,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_2cd3b93d94a3526523acbac6434bde46",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_721b969b767c288cabd8517bf2633c70",
+                                                        "parent": "aspace_2cd3b93d94a3526523acbac6434bde46",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_7"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -1511,10 +1774,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_42865f4db8ccee52618a8411ebcd63f2",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3.22 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_98a74c86ba47078910a18ff84867bbb9",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_93d86f843c2dbfc50325e7f51968455a",
+                                                        "parent": "aspace_98a74c86ba47078910a18ff84867bbb9",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_20"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/q83bk8df",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Minami Kato -- Performance: 2015-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2015/2015",
+                                                        "value": "2015"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5759"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Kato, Minami -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_020406eec9bf4f2b24f7b1a629431193",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2015/2015",
@@ -1565,10 +1906,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_5e560c3bf54e027c70c25346d327be5f",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_c471cdea803d5ac65d09efb12e46793a",
+                                                        "parent": "aspace_5e560c3bf54e027c70c25346d327be5f",
+                                                        "type": "object",
+                                                        "value": " FA_MSS_460_ER_21"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/0rxwdhjx",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -1596,59 +1952,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Kim, K. Marie -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_0155c334eda826ee3be56020f860521c",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3.08 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/kh1897w3",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "K. Marie Kim -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5762"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Kim, K. Marie -- Performance"
                                                     }
                                                 ]
                                             }
@@ -1686,10 +1989,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_81883315d5a4c5def542cfaa7512aae1",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_aad795e3f3524283ecce7cbf7af65fe1",
+                                                        "parent": "aspace_81883315d5a4c5def542cfaa7512aae1",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_33"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -1721,10 +2039,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_0155c334eda826ee3be56020f860521c",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3.08 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_c4e4de6707956e34b4033b1dbfb8cdc0",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_2ce8535e297f4c6c5f5ab75b0356fd33",
+                                                        "parent": "aspace_c4e4de6707956e34b4033b1dbfb8cdc0",
+                                                        "type": "object",
+                                                        "value": " FA_MSS_460_ER_22"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/kh1897w3",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "K. Marie Kim -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5762"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Kim, K. Marie -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_76df601dfc88c5ffa2c34cdd5a0f88d5",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -1775,10 +2171,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_47de46515066571714e8d49d864e9f77",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_39f49733c942b48c48f7a1d34f5c8d00",
+                                                        "parent": "aspace_47de46515066571714e8d49d864e9f77",
+                                                        "type": "object",
+                                                        "value": " FA_MSS_460_ER_24"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/w0vt4h61",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -1806,59 +2217,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "McKenzie, Dion -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_1bdcef3343c3a46a12612acdda500077",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "5.93 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/fqz617d4",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Dion McKenzie -- Performance: 2015-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2015/2015",
-                                                        "value": "2015"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5765"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "McKenzie, Dion -- Performance"
                                                     }
                                                 ]
                                             }
@@ -1896,10 +2254,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_84c330f24e2ddfe2bf00ce59e248681c",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_71a96b9efc7dd6519c1fb02988c31bf2",
+                                                        "parent": "aspace_84c330f24e2ddfe2bf00ce59e248681c",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_25 "
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -1931,10 +2304,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_1bdcef3343c3a46a12612acdda500077",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "5.93 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_5f81d47eccba5a1018a129bea432cdf2",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_9293a123964a0096a7eabab65746d322",
+                                                        "parent": "aspace_5f81d47eccba5a1018a129bea432cdf2",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_26"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/fqz617d4",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Dion McKenzie -- Performance: 2015-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2015/2015",
+                                                        "value": "2015"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5765"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "McKenzie, Dion -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_c01b4c7acc0aabfe76d7f17dac96f689",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2015/2016",
@@ -1986,10 +2437,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_7816c05aceeaced1c7d039e46f6adaf6",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_52a825fe1489972ec90ff17f249bf6a5",
+                                                        "parent": "aspace_7816c05aceeaced1c7d039e46f6adaf6",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_34"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/r7sqvgpj",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -2017,59 +2483,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Plückhan, Franziska -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_5cc0026c150804366f214c82392c7242",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3.98 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/b2rbp4j8",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Franziska Plückhan -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5768"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Plückhan, Franziska -- Performance"
                                                     }
                                                 ]
                                             }
@@ -2107,10 +2520,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_c87ae43ee031ca9c62495f2e4cb1570b",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_6cf7d4c18b060df187380f59068a3966",
+                                                        "parent": "aspace_c87ae43ee031ca9c62495f2e4cb1570b",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_23"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -2142,10 +2570,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_5cc0026c150804366f214c82392c7242",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3.98 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_553984cbe95fd7cbb001136dab066985",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_fa4c9ea761c60da97409bdb9428fdbc7",
+                                                        "parent": "aspace_553984cbe95fd7cbb001136dab066985",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_27"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/b2rbp4j8",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Franziska Plückhan -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5768"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Plückhan, Franziska -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_38b1b4979d829ceebdc95170792afaab",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -2196,12 +2702,27 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_b4030638d011d60689a5868f54f4b3f5",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_5a0fcb98c12c2a42b7530f7398dca0c9",
+                                                        "parent": "aspace_b4030638d011d60689a5868f54f4b3f5",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_28"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/mgqnkg5d",
-                                                        "role": "video-service",
+                                                        "role": "electronic-records-service",
                                                         "show": "new",
                                                         "type": "simple",
                                                         "daodesc": {
@@ -2227,59 +2748,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Sasaki, Pauchi -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_8abb4def6dd5b1b73f144c8f14f5b0b6",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "4.07 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/69p8d42c",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Pauchi Sasaki -- Performance: 2016-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2016/2016",
-                                                        "value": "2016"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5771"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Sasaki, Pauchi -- Performance"
                                                     }
                                                 ]
                                             }
@@ -2317,10 +2785,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_1b5deac129fbb373e1d2e01eab912259",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_9249d848ad1099c4accf39c20f766fe6",
+                                                        "parent": "aspace_1b5deac129fbb373e1d2e01eab912259",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_11"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -2352,10 +2835,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_8abb4def6dd5b1b73f144c8f14f5b0b6",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "4.07 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_e5956c5557036db43b5f2a80a418d0ce",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_3be8422a71cc2d88487b5d7d40a8d5c3",
+                                                        "parent": "aspace_e5956c5557036db43b5f2a80a418d0ce",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_29"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/69p8d42c",
+                                                        "role": "electronic-records-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Pauchi Sasaki -- Performance: 2016-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2016/2016",
+                                                        "value": "2016"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5771"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Sasaki, Pauchi -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_0ff5b861eddd2732cffaf1bce43588a3",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2016/2016",
@@ -2406,10 +2967,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_2791f660e451df152c5fbed7b74075a2",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_181e8f05a6104551b81c89badc83e77a",
+                                                        "parent": "aspace_2791f660e451df152c5fbed7b74075a2",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_30"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "http://hdl.handle.net/2333.1/gqnk9fmt",
                                                         "role": "video-service",
                                                         "show": "new",
@@ -2437,59 +3013,6 @@
                                                 "unittitle": [
                                                     {
                                                         "value": "Silvestre, Gisela Fullá -- Edited interview"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id": "aspace_24423b2187c2cf8c0def3303f54a0877",
-                                        "level": "item",
-                                        "did": [
-                                            {
-                                                "physdesc": [
-                                                    {
-                                                        "extent": [
-                                                            {
-                                                                "value": "3.72 Gigabytes"
-                                                            },
-                                                            {
-                                                                "value": "in 1 video file."
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "dao": [
-                                                    {
-                                                        "actuate": "onRequest",
-                                                        "audience": "external",
-                                                        "href": "http://hdl.handle.net/2333.1/2jm643j1",
-                                                        "role": "video-service",
-                                                        "show": "new",
-                                                        "type": "simple",
-                                                        "daodesc": {
-                                                            "p": [
-                                                                {
-                                                                    "value": "Gisela Fullá Silvestre -- Performance: 2015-"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ],
-                                                "unitdate": [
-                                                    {
-                                                        "normal": "2015/2015",
-                                                        "value": "2015"
-                                                    }
-                                                ],
-                                                "unitid": [
-                                                    {
-                                                        "value": "cuid5774"
-                                                    }
-                                                ],
-                                                "unittitle": [
-                                                    {
-                                                        "value": "Silvestre, Gisela Fullá -- Performance"
                                                     }
                                                 ]
                                             }
@@ -2527,10 +3050,25 @@
                                                         ]
                                                     }
                                                 ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_2ddd5c0677b73ad1171d4f67aec9ff7b",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_e5a94018e72e9bb14a6fc87d2a1571b9",
+                                                        "parent": "aspace_2ddd5c0677b73ad1171d4f67aec9ff7b",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_12"
+                                                    }
+                                                ],
                                                 "dao": [
                                                     {
                                                         "actuate": "onRequest",
-                                                        "audience": "external",
                                                         "href": "https://aeon.library.nyu.edu/remoteauth/aeon.dll?Action=10\u0026Form=10\u0026Value=http://dlib.nyu.edu/findingaids/ead/fales/MSS_460.xml\u0026view=xml",
                                                         "role": "electronic-records-service",
                                                         "show": "new",
@@ -2562,10 +3100,88 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "aspace_24423b2187c2cf8c0def3303f54a0877",
+                                        "level": "item",
+                                        "did": [
+                                            {
+                                                "physdesc": [
+                                                    {
+                                                        "extent": [
+                                                            {
+                                                                "value": "3.72 Gigabytes"
+                                                            },
+                                                            {
+                                                                "value": "in 1 video file."
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "container": [
+                                                    {
+                                                        "barcode": "31142063412350",
+                                                        "label": "Mixed Materials",
+                                                        "altrender": "Hard Drive",
+                                                        "id": "aspace_695b22d4b2495542f9853183240dfcc2",
+                                                        "type": "E-records",
+                                                        "value": "FA_MSS_460"
+                                                    },
+                                                    {
+                                                        "id": "aspace_3f2cc1961150b97b4c957a7fdedf48e8",
+                                                        "parent": "aspace_695b22d4b2495542f9853183240dfcc2",
+                                                        "type": "object",
+                                                        "value": "FA_MSS_460_ER_31"
+                                                    }
+                                                ],
+                                                "dao": [
+                                                    {
+                                                        "actuate": "onRequest",
+                                                        "href": "http://hdl.handle.net/2333.1/2jm643j1",
+                                                        "role": "video-service",
+                                                        "show": "new",
+                                                        "type": "simple",
+                                                        "daodesc": {
+                                                            "p": [
+                                                                {
+                                                                    "value": "Gisela Fullá Silvestre -- Performance: 2015-"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "unitdate": [
+                                                    {
+                                                        "normal": "2015/2015",
+                                                        "value": "2015"
+                                                    }
+                                                ],
+                                                "unitid": [
+                                                    {
+                                                        "value": "cuid5774"
+                                                    }
+                                                ],
+                                                "unittitle": [
+                                                    {
+                                                        "value": "Silvestre, Gisela Fullá -- Performance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "did": [
                                     {
+                                        "container": [
+                                            {
+                                                "barcode": "31142063412350",
+                                                "label": "Mixed Materials",
+                                                "altrender": "Hard Drive",
+                                                "id": "aspace_26320c0a24b47825b78e95e9b4743cb5",
+                                                "type": "E-records",
+                                                "value": "FA_MSS_460"
+                                            }
+                                        ],
                                         "unitdate": [
                                             {
                                                 "normal": "2015/2015",
@@ -2693,38 +3309,6 @@
                 {
                     "publicationstmt": [
                         {
-                            "address": [
-                                {
-                                    "addressline": [
-                                        {
-                                            "value": "Elmer Holmes Bobst Library"
-                                        },
-                                        {
-                                            "value": "70 Washington Square South"
-                                        },
-                                        {
-                                            "value": "2nd Floor"
-                                        },
-                                        {
-                                            "value": "New York, NY 10012"
-                                        },
-                                        {
-                                            "value": "special.collections@nyu.edu"
-                                        },
-                                        {
-                                            "extptr": [
-                                                {
-                                                    "href": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
-                                                    "show": "new",
-                                                    "title": "http://library.nyu.edu/about/collections/special-collections-and-archives/special-collections/",
-                                                    "type": "simple"
-                                                }
-                                            ],
-                                            "value": "URL: "
-                                        }
-                                    ]
-                                }
-                            ],
                             "publisher": "Fales Library and Special Collections",
                             "p": [
                                 {
@@ -2752,7 +3336,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-11-04 11:43:40 -0500"
+                                "2020-12-14 09:12:19 -0500"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }

@@ -65,7 +65,7 @@
             {
                 "genreform": [
                     "Correspondence.",
-                    "Typescripts."
+                    "Typescripts"
                 ],
                 "persname": [
                     {
@@ -103,16 +103,16 @@
                         "barcode": "31142063292638",
                         "label": "Mixed Materials",
                         "altrender": "Manuscript box - Legal",
-                        "id": "aspace_99c7971b44e213d4c5818a65e49dd9aa",
-                        "type": "Box",
+                        "id": "aspace_801d20ec1e654bfcf5f837df9591d633",
+                        "type": "box",
                         "value": "1"
                     },
                     {
                         "barcode": "31142063292620",
                         "label": "Mixed Materials",
                         "altrender": "Manuscript box - Legal - Half",
-                        "id": "aspace_781dffbe095c7a144d6636b9bde385dc",
-                        "type": "Box",
+                        "id": "aspace_d1222c77ec44d9f8f17eae62d6c44a80",
+                        "type": "box",
                         "value": "2"
                     }
                 ],
@@ -243,8 +243,6 @@
         {
             "eadid": [
                 {
-                    "countrycode": "US",
-                    "mainagencycode": "US-NNU-TL",
                     "url": "http://dlib.nyu.edu/findingaids/html/tamwag/tam_693/",
                     "value": "tam_693"
                 }
@@ -312,7 +310,7 @@
                     "creation": [
                         {
                             "date": [
-                                "2020-06-10 17:04:06 -0400"
+                                "2020-12-11 11:15:57 -0500"
                             ],
                             "value": "This finding aid was produced using ArchivesSpace on ."
                         }
