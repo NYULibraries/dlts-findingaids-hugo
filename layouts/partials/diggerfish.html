@@ -21,7 +21,10 @@
       {{- $repository := index $arguments "did" 0 "repository"  -}}
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
       {{- $unitid := index $arguments "did" 0 "unitid"  -}}
-      {{- $unittitle := index $arguments "did" 0 "unittitle" 0 "value" -}}
+      {{- $unittitle := "No unittitle available" -}}
+      {{ if (reflect.IsSlice (index $arguments "did" 0 "unittitle")) -}}
+        {{- $unittitle = index $arguments "did" 0 "unittitle" 0 "value" -}}
+      {{- end -}}
       {{- $container := index $arguments "did" 0 "container"  -}}
       {{- $dao := index $arguments "did" 0 "dao" -}}
       {{- $recursions := add $recursions 1 -}}
