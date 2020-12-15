@@ -10,10 +10,7 @@
   
     {{ range where .Site.RegularPages.ByTitle "Section" "guides" }}
     {{- $pageurl := .RelPermalink -}}
-    <li >{{ .Params.identifier}}<br>
-      <a  href="{{ $pageurl }}">{{ $pageurl }} </a><br>
-      <div>{{ .Content }} </div>
-    </li>
+    <li ><a  href="{{ $pageurl }}">{{ $pageurl }} </a></li>
     {{ end }}
 
   </main></div>
