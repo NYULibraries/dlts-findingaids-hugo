@@ -21,7 +21,7 @@
       {{- $repository := index $arguments "did" 0 "repository"  -}}
       {{- $dates := index $arguments "did" 0 "unitdate"  -}}
       {{- $unitid := index $arguments "did" 0 "unitid"  -}}
-      {{- $unittitle := "No unittitle available" -}}
+      {{- $unittitle := "" -}}
       {{ if (reflect.IsSlice (index $arguments "did" 0 "unittitle")) -}}
         {{- $unittitle = index $arguments "did" 0 "unittitle" 0 "value" -}}
       {{- end -}}
@@ -30,12 +30,17 @@
       {{- $recursions := add $recursions 1 -}}
 
       {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
-      {{- if (lt $recursions 7 ) -}}
-          <h{{- $recursions }} class="unittitle" id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}</h{{- $recursions -}}>
-        {{- else }}
+      
+      
+      
+      {{- if (lt $recursions 7 ) }}
+      <h{{- $recursions }} class="unittitle 
+        {{- if (eq $unittitle  "") }} no-unittitle{{- end -}}
+      " id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}</h{{- $recursions -}}>
+        {{- else -}}
           <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
-        {{- end }}
-      {{ if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div>
+        {{- end -}}
+      {{- if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div>
         {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
       {{- end -}}
       {{ with $container -}}
