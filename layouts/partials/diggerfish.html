@@ -36,7 +36,7 @@
       {{- if (lt $recursions 7 ) }}
       <h{{- $recursions }} class="unittitle 
         {{- if (eq $unittitle  "") }} no-unittitle{{- end -}}
-      " id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}{{- if (ne $unittitle  "") -}}<span class="delim">, </span>{{- end -}}{{- if ($dates) -}}<span class="dates">{{- range $dates -}}{{ .value -}}{{- end -}}</span>{{- end -}}</h{{- $recursions -}}>
+      " id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}{{- if and (ne $unittitle  "") (reflect.IsSlice ($dates)) -}}<span class="delim">, </span>{{- end -}}{{- if ($dates) -}}<span class="dates">{{- range $dates -}}{{ .value -}}{{- end -}}</span>{{- end -}}</h{{- $recursions -}}>
         {{- else -}}
           <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
         {{- end -}}
