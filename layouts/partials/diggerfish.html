@@ -40,9 +40,6 @@
         {{- else -}}
           <div class="unittitle" id ="{{ $aid }}" >{{- htmlUnescape $unittitle | safeHTML -}}</div>
         {{- end -}}
-      {{- if ($dates) -}}<div class="dates"><div class="label  formattednote-header">Dates: </div>
-        {{- range $dates -}}{{-  .value -}}{{- end -}}</div>
-      {{- end -}}
       {{ with $container -}}
         {{- partial "fields/container.html" (dict "current" .) -}}
       {{- end -}}
