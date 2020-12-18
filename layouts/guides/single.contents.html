@@ -11,7 +11,7 @@
   <main id="content">
     {{- partial "menu-toggle-button.html" . -}}
     {{- if $dsc -}}
-      <h1 class="page-title">{{ partial "unittitle.html"  (dict "archdesc" $archdesc )  }}</h1>  
+      <h1 class="page-title">{{ partial "fields/unittitle.html"  (dict "archdesc" $archdesc )  }}</h1>  
       <h2>Contents</h2>
       {{- $components := index $dsc 0 "c" -}}
       {{- if $components  -}}{{/* This is an array of one */}}

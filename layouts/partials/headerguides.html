@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 
     {{ partial "meta.html" .context -}}
-    <title>{{-  partial "unittitle.html" (dict "archdesc" $archdesc )  }}</title>
+    <title>{{-  partial "fields/unittitle.html" (dict "archdesc" $archdesc )  }}</title>
     <link rel="canonical" href="{{ .context.Permalink }}" />
 
     {{ partial "head_includes.html" . }}
