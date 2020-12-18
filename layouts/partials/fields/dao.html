@@ -37,6 +37,7 @@
     {{/* If it's http or https or otherwise a web link - https://gohugo.io/functions/urls.parse/#readout  */}}
       {{- $whichicon := "fa-bolt" -}}
       {{- $daolabel := "UnknownDAO role" -}}
+      {{- $thumbnailpath := "" -}}
       {{- if  $role -}}
         {{- if eq $role "audio-service"}}
           {{- $whichicon = "fa-file-audio" }}
@@ -44,6 +45,9 @@
         {{- else if eq $role "image-service" }}
           {{- $whichicon = "fa-file-image" -}}
           {{- $daolabel = "View digitized images" }}
+          {{- $thumbnailpath =  $href    }} 
+          {{- $thumbnailpath = "?urlappend=/mode/thumb" | printf "%s%s" $href    }} 
+          
         {{- else if eq $role "video-service" }}
           {{- $whichicon = "fa-file-video" -}}
           {{- $daolabel = "Stream video" }}
@@ -60,18 +64,19 @@
       {{- if in $hrefurl.Host "aeon.library.nyu.edu" -}}
         <div style="float: right;"><a role="button" target="_blank" class="aeon-button btn btn-info" href="{{ $href }}">Request Reading Room Access</a></div>
         <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> Electronic Record: <b>{{ $daodescstring }} </b></div>
+      {{- else if (eq $role "image-service") -}}
+        <a class="dao image-service" target="_blank" href="{{ $href }}" target="_new"><div class="dao-href">
+          {{- with  $thumbnailpath  -}}<div class="thumbnail-hold"><img class="thumbnail" src="{{ . }}"></div>{{- end -}} 
+            <b>{{ $daodescstring }}</b></div></a>
       {{- else -}}
-        <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> <b><a class="dao"  target="_blank"  href="{{ $href }}">{{ $daodescstring }}</a></b></div>
-      {{ end }}
-
+      <div class="dao-href"><i class="fas {{ $whichicon }} fa-1x"></i> <b><a class="dao"  target="_blank"  href="{{ $href }}">{{ $daodescstring }}</a></b></div>
+      {{ end }}  
   {{- else -}}
     <div class="dao-identifier">Href: {{ $href }}</div>
     {{ range  .current.daodesc.p  -}}
     <div class="dao-description">{{ $daodescstring }} </div>
     {{- end -}}
   {{- end -}}
-
-
 
 </div>
 </div>
