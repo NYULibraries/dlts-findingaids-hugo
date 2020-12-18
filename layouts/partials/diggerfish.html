@@ -30,7 +30,7 @@
       {{- $recursions := add $recursions 1 -}}
 
       {{/*  Structuring the DOM; header levels correspond with recursion level  */}}
-      {{- if (lt $recursions 7 ) -}}
+      {{- if (lt $recursions 7 ) }}
         <h{{- $recursions }} class="unittitle 
         {{- if (eq $unittitle  "") }} no-unittitle{{- end -}}
       " id ="{{ $aid }}">{{- htmlUnescape $unittitle | safeHTML -}}{{- if and (ne $unittitle  "") (reflect.IsSlice ($dates)) -}}<span class="delim">, </span>{{- end -}}{{- if ($dates) -}}<span class="dates">{{- range $dates -}}{{ .value -}}{{- end -}}</span>{{- end -}}</h{{- $recursions -}}>
