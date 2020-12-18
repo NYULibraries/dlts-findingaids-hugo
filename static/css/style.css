@@ -384,3 +384,24 @@ main#content {
 .ead-lb::after {
   content: "–";
 }
+
+a.image-service {
+  display:block;
+}
+a.image-service b {
+  display:inline-block;
+}
+.thumbnail-hold {
+  display:inline-block;
+  /* width: 100px; */
+  height: 100px;
+  margin-right: 20px;
+  min-width:100px;
+  background: #ffcccc;
+}
+.thumbnail {
+  display:inline-block;
+  width: auto;
+  height: 100px;
+  background: #cccccc;
+}
