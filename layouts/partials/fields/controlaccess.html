@@ -15,7 +15,7 @@
     <h{{- $hnext  }}>corpname</h{{- $hnext  }}>
     <div>
       {{ range $i, $e :=  .current.corpname -}}
-      <span class="corpname-value">{{- .value -}}</span> {{- if .role -}}<span class="corpname-role">Role: {{- .role -}}</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
+      <span class="corpname-value">{{- .value -}}</span> {{- if .role }} <span class="corpname-role">(Role: {{ .role -}})</span>{{ end -}}{{- if ne $i $lastindex -}}; {{ end -}}
       {{- end }}
     </div>
   {{- end }}
