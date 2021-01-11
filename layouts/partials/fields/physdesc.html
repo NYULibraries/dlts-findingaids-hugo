@@ -1,7 +1,0 @@
-{{/* physdesc */}}
-{{- $h := add .recursions 1 -}}
-<div class="formattednote {{ .classname  }}"><h{{- $h  }} class="label formattednote-header">Extent</h{{- $h  -}}>
-{{- range .current -}}
-{{- if .value -}}<span>{{- .value }}</span>{{- end -}}
-{{- if .extent -}}
-{{- range .extent -}}<span>{{- .value | safeHTML  }}</span> {{ end -}} <br>{{- end -}}{{- end -}}</div>
