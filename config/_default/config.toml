@@ -40,3 +40,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 
 
+[module]
+  [[module.imports]]
+    path = "github.com/NYULibraries/findingaids-hugo-theme"
