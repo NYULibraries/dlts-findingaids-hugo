@@ -287,10 +287,6 @@
   </url>
   
   <url>
-    <loc>http://localhost/findingaids/guides/archives/mc_209/</loc>
-  </url>
-  
-  <url>
     <loc>http://localhost/findingaids/guides/archives/mc_21/</loc>
   </url>
   
@@ -1335,6 +1331,14 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/archives/rism_rg_16_h/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/archives/rism_rg_16_j/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/archives/rism_rg_18/</loc>
   </url>
   
@@ -2327,10 +2331,6 @@
   </url>
   
   <url>
-    <loc>http://localhost/findingaids/guides/fales/mss_311/</loc>
-  </url>
-  
-  <url>
     <loc>http://localhost/findingaids/guides/fales/mss_313/</loc>
   </url>
   
@@ -2732,10 +2732,6 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/fales/mss_495/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost/findingaids/guides/fales/mss_496/</loc>
   </url>
   
   <url>
