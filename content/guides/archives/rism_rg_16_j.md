@@ -1,4 +1,4 @@
 {
     "repoidentifier": "archives",
-    "identifier": "mc_209"
+    "identifier": "rism_rg_16_j"
 }
