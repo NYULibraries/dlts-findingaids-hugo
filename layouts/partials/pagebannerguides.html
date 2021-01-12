@@ -1,5 +1,0 @@
-{{- $json := .json  -}}
-<header class="main-header">
-  <a class="back-link" href="{{ .context.Site.BaseURL | relURL }}" ><<< Back to list</a> 
- <h1><a href="{{ .context.Site.BaseURL | relURL }}" class="site-title">{{ partial "fields/titleproper.html" (dict "context" . "json" $json ) }} </a> </h1>
-</header>
