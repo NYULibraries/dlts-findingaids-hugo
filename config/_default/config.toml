@@ -1,6 +1,6 @@
 baseURL = "http://localhost/findingaids/"
 languageCode = "en-us"
-title = "Sample set 2 "
+title = "Sample set 2 -- EAD source files v3.1 (https://github.com/NYULibraries/dlts-finding-aids-ead-sample-set-2/tag/v3.1) "
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
