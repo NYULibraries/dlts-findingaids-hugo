@@ -287,6 +287,10 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/archives/mc_209/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/archives/mc_21/</loc>
   </url>
   
@@ -815,6 +819,10 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/archives/photo_00001/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/archives/photo_002/</loc>
   </url>
   
@@ -1111,6 +1119,10 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/archives/rg_39_201/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/archives/rg_39_210/</loc>
   </url>
   
@@ -1156,6 +1168,10 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/archives/rg_3_0_7/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/archives/rg_3_0_8/</loc>
   </url>
   
   <url>
@@ -1375,10 +1391,6 @@
   </url>
   
   <url>
-    <loc>http://localhost/findingaids/guides/archives/sawhill/</loc>
-  </url>
-  
-  <url>
     <loc>http://localhost/findingaids/guides/fales/mss_001/</loc>
   </url>
   
@@ -1559,6 +1571,10 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_055/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/fales/mss_056/</loc>
   </url>
   
@@ -1584,10 +1600,6 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/fales/mss_069/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost/findingaids/guides/fales/mss_070/</loc>
   </url>
   
   <url>
@@ -2071,6 +2083,10 @@
   </url>
   
   <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_221/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/findingaids/guides/fales/mss_222/</loc>
   </url>
   
@@ -2328,6 +2344,10 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/fales/mss_310/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/fales/mss_311/</loc>
   </url>
   
   <url>
@@ -2940,10 +2960,6 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/fales/mss_601/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost/findingaids/guides/fales/semio/</loc>
   </url>
   
   <url>
@@ -4400,6 +4416,10 @@
   
   <url>
     <loc>http://localhost/findingaids/guides/tamwag/pe_042/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/findingaids/guides/tamwag/pe_043/</loc>
   </url>
   
   <url>
