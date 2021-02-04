@@ -1,6 +1,6 @@
 baseURL = "http://localhost/findingaids/"
 languageCode = "en-us"
-title = "Finding Aids Data Model 5.0.2, Akkasah Turkey Collection has new EADID"
+title = "Finding Aids Data Model 5.0.?, Sample Set 1 update 2021-02-04"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
